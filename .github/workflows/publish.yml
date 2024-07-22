@@ -15,7 +15,7 @@ jobs:
           java-version: "12.x"
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.x.x" # Specify your Flutter version
+          flutter-version: "3.22.2" # Specify your Flutter version
       - run: flutter pub get
       - run: flutter build apk --release
       - name: Publish APK
