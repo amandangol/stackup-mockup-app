@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stackup_app/screens/login_screen/login_screen.dart';
-import 'package:stackup_app/screens/signup_screen/signup_screen.dart';
+import 'package:stackup_app/screens/authscreens/login_screen/login_screen.dart';
+import 'package:stackup_app/screens/authscreens/signup_screen/signup_screen.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});

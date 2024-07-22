@@ -9,7 +9,9 @@ void showLoadingDialog(BuildContext context) {
       return Dialog(
         backgroundColor: Colors.transparent,
         child: Center(
-          child: SpinKitCircle(),
+          child: SpinKitCircle(
+            color: Theme.of(context).colorScheme.primary,
+          ),
         ),
       );
     },

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:stackup_app/bottomnav/bottomNavWrapper.dart';
 import 'package:stackup_app/config/routes/routes_name.dart';
 import 'package:stackup_app/screens/home_screen/home_screen.dart';
-import 'package:stackup_app/screens/login_screen/login_screen.dart';
+import 'package:stackup_app/screens/authscreens/login_screen/login_screen.dart';
 import 'package:stackup_app/screens/ongoing_campaigns/ongoing_campaigns.dart';
-import 'package:stackup_app/screens/signup_screen/signup_screen.dart';
+import 'package:stackup_app/screens/authscreens/signup_screen/signup_screen.dart';
 import 'package:stackup_app/screens/splash_screen/splash_screen.dart';
 
 class Routes {

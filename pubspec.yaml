@@ -38,7 +38,7 @@ dependencies:
   flutter_spinkit: ^5.2.1
   google_fonts: ^6.2.1
   firebase_auth: ^4.16.0
-  firebase_core: ^2.24.2
+  firebase_core: ^2.32.0
   expansion_tile_card: ^3.0.0
   url_launcher: ^6.3.0
 

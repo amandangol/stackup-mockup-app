@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stackup_app/screens/home_screen/widgets/my_drawer_tile.dart';
-import 'package:stackup_app/screens/login_screen/login_screen.dart';
+import 'package:stackup_app/screens/authscreens/login_screen/login_screen.dart';
 import 'package:stackup_app/screens/settings/setting_screen.dart';
 import 'package:stackup_app/services/auth/auth_service.dart';
 import 'package:url_launcher/url_launcher.dart';

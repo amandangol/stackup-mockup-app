@@ -30,46 +30,49 @@ class _BottomNavHomeState extends State<BottomNavHome> {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: colorScheme.secondary,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        selectedLabelStyle: TextStyle(color: colorScheme.secondary),
-        unselectedItemColor: colorScheme.secondary,
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: colorScheme.primary,
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: colorScheme.secondary,
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+          selectedLabelStyle: TextStyle(color: colorScheme.secondary),
+          unselectedItemColor: colorScheme.secondary,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: colorScheme.primary,
+              ),
+              label: 'Home',
             ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.leaderboard,
-              color: colorScheme.primary,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.leaderboard,
+                color: colorScheme.primary,
+              ),
+              label: 'Progress',
             ),
-            label: 'Progress',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.money,
-              color: colorScheme.primary,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.money,
+                color: colorScheme.primary,
+              ),
+              label: 'Balance',
             ),
-            label: 'Balance',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: colorScheme.primary,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                color: colorScheme.primary,
+              ),
+              label: 'Profile',
             ),
-            label: 'Profile',
-          ),
-        ],
+          ],
+        ),
+        body: _pages[_selectedIndex],
       ),
-      body: _pages[_selectedIndex],
     );
   }
 }
