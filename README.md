@@ -60,6 +60,8 @@ While this README describes a conceptual mock-up, the actual development of the 
 - Implementing efficient data synchronization between the mobile app and StackUp servers.
 - Optimizing the app for performance across various mobile devices.
 
+## NOTE: The link for the APK file is [HERE]([https://www.openai.com](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) . You can install it on your device and test it. 🥲
+
 ## Conclusion
 
 The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
