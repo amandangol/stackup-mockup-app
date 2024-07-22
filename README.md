@@ -9,16 +9,15 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 ### 1. Authentication
 - **Sign Up**: New users can create their StackUp accounts directly from the mobile app.
 - **Login**: Existing users can securely access their accounts.
-- <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500">  <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="login"  height="500">
-
-
-
-
+- <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500">  <img src="https://github.com/user-attachments/assets/41acd5e7-bf5a-4b23-9c8f-0320daa6137f" alt="login"  height="500">
 
 ### 2. Campaigns and Quests
 - Browse and view available campaigns.
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
+- <img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">
+
+
 
 ### 3. User Progress Screen
 - Comprehensive overview of the user's journey on StackUp.
