@@ -22,10 +22,13 @@ class GlanceCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 245, 234, 238),
+              color: colorScheme.inversePrimary,
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Icon(icon),
+            child: Icon(
+              icon,
+              color: colorScheme.secondary,
+            ),
           ),
           const SizedBox(
             width: 10,

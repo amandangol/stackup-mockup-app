@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.secondary,
+            color: Theme.of(context).colorScheme.primary,
             borderRadius: const BorderRadius.all(Radius.circular(16))),
         child: Center(
           child: Text(
@@ -26,7 +26,7 @@ class CustomButton extends StatelessWidget {
             style: TextStyle(
                 letterSpacing: 1,
                 fontSize: 18,
-                color: Theme.of(context).colorScheme.inversePrimary),
+                color: Theme.of(context).colorScheme.secondary),
           ),
         ),
       ),

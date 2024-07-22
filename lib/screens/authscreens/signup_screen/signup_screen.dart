@@ -40,9 +40,20 @@ class _LoginScreenState extends State<SignupScreen> {
         // usernameController.text,
       );
       print("${usernameController.text}aas");
-      hideLoadingDialog(context);
+      // hideLoadingDialog(context);
 
       Navigator.pushNamed(context, RoutesName.bottomNavHome);
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          backgroundColor: Colors.green,
+          content: const Text("Signed up succesfully"),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          behavior: SnackBarBehavior.floating,
+          margin: const EdgeInsets.all(10),
+        ),
+      );
     } catch (e) {
       hideLoadingDialog(context);
 
@@ -63,6 +74,14 @@ class _LoginScreenState extends State<SignupScreen> {
         ),
       );
     }
+  }
+
+  bool _isConfirmPwVisible = false;
+
+  void _toggleConfirmPwVisibility() {
+    setState(() {
+      _isConfirmPwVisible = !_isConfirmPwVisible;
+    });
   }
 
   @override
@@ -104,6 +123,7 @@ class _LoginScreenState extends State<SignupScreen> {
                   height: 25,
                 ),
                 CustomTextField(
+                    labelText: "Email",
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return "Please enter your email";
@@ -111,7 +131,7 @@ class _LoginScreenState extends State<SignupScreen> {
                       return null;
                     },
                     controller: emailController,
-                    hintText: "Email",
+                    hintText: "Enter your email",
                     obscureText: false),
                 const SizedBox(
                   height: 10,
@@ -130,9 +150,10 @@ class _LoginScreenState extends State<SignupScreen> {
                 //   height: 10,
                 // ),
                 CustomTextField(
+                    labelText: "Password",
                     suffixIcon: value.isObscure
-                        ? Icons.visibility
-                        : Icons.visibility_off,
+                        ? Icons.visibility_off
+                        : Icons.visibility,
                     onTap: value.toggleObscure,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -141,12 +162,13 @@ class _LoginScreenState extends State<SignupScreen> {
                       return null;
                     },
                     controller: passwordController,
-                    hintText: "Password",
+                    hintText: "Enter your password",
                     obscureText: value.isObscure),
                 const SizedBox(
                   height: 10,
                 ),
                 CustomTextField(
+                  labelText: "Confirm Password",
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return "Please confirm the password";
@@ -157,11 +179,12 @@ class _LoginScreenState extends State<SignupScreen> {
                     return null;
                   },
                   controller: confirmPasswordController,
-                  hintText: "Confirm Password",
-                  obscureText: value.isObscure,
-                  suffixIcon:
-                      value.isObscure ? Icons.visibility_off : Icons.visibility,
-                  onTap: value.toggleObscure,
+                  hintText: "Please confirm your Password",
+                  obscureText: _isConfirmPwVisible,
+                  suffixIcon: _isConfirmPwVisible
+                      ? Icons.visibility_off
+                      : Icons.visibility,
+                  onTap: _toggleConfirmPwVisibility,
                 ),
                 const SizedBox(
                   height: 25,

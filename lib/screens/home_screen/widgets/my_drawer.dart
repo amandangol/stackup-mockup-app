@@ -39,7 +39,7 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return Drawer(
-      backgroundColor: colorScheme.surface,
+      backgroundColor: colorScheme.secondary,
       child: Column(
         children: [
           Padding(

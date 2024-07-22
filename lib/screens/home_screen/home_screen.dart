@@ -32,7 +32,10 @@ class HomeScreen extends StatelessWidget {
           title: Consumer<UserProvider>(builder: (context, user, child) {
             print("user${user.username}");
             return Text(
-              user.username != null ? "Welcome, ${user.username}" : "Welcome",
+              user.username != null
+                  ? "Welcome, ${user.username}"
+                  : "Welcome...",
+              style: GoogleFonts.poppins(),
             );
           }),
         ),

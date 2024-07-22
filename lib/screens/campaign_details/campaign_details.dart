@@ -14,6 +14,13 @@ class CampaignDetails extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: colorScheme.surface,
+          title: Text(
+            "Campaign",
+            style: GoogleFonts.poppins(color: colorScheme.inversePrimary),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,17 +33,8 @@ class CampaignDetails extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Campaign",
-                  style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      color: colorScheme.primary),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 15),
                 child: Text(
                   campaign!.title!,
                   style: GoogleFonts.poppins(
@@ -179,8 +177,8 @@ class CampaignDetails extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8)),
                         child: Text(
                           campaign!.campaignStatus!,
-                          style: GoogleFonts.poppins(
-                              color: colorScheme.inversePrimary),
+                          style:
+                              GoogleFonts.poppins(color: colorScheme.primary),
                         ),
                       ),
                     ],
@@ -380,7 +378,7 @@ class CampaignDetails extends StatelessWidget {
                                       child: Text(
                                         "Ongoing",
                                         style: GoogleFonts.poppins(
-                                            color: colorScheme.inversePrimary),
+                                            color: colorScheme.primary),
                                       ),
                                     ),
                                     const Spacer(),
