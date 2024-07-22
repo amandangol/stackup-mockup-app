@@ -94,4 +94,4 @@ While this README describes a conceptual mock-up, the actual development of the 
 
 The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
 
-We welcome feedback and suggestions to further refine this concept and potentially bring the StackUp mobile app to life in the future.
+I welcome feedback and suggestions to further refine this concept and potentially bring the StackUp mobile app to life in the future.
