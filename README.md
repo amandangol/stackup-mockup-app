@@ -9,15 +9,13 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 ### 1. Authentication
 - **Sign Up**: New users can create their StackUp accounts directly from the mobile app.
 - **Login**: Existing users can securely access their accounts.
-- <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500">  <img src="https://github.com/user-attachments/assets/41acd5e7-bf5a-4b23-9c8f-0320daa6137f" alt="login"  height="500">
+ <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500">   <img src="https://github.com/user-attachments/assets/41acd5e7-bf5a-4b23-9c8f-0320daa6137f" alt="login"  height="500">
 
 ### 2. Campaigns and Quests
 - Browse and view available campaigns.
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
-- <img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">
-
-
+ <img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500">   <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500">   <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">
 
 ### 3. User Progress Screen
 - Comprehensive overview of the user's journey on StackUp.
@@ -26,11 +24,13 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Filter functionality:
   - View ongoing quests and bounties
   - Access past quests and bounties
+<img src="https://github.com/user-attachments/assets/5364e0c0-abee-4823-b6af-eb3e79ac94da" alt="myprogress"  height="500">   <img src="https://github.com/user-attachments/assets/83cfe433-6e9c-4bbb-abfc-698db199fa7e" alt="myprpgress2"  height="500">   <img src="https://github.com/user-attachments/assets/87fbf61f-7965-4bad-b054-02a30bff431b" alt="bounties"  height="500">
 
 ### 4. My Earnings
 - Dedicated section displaying user's earnings information.
 - Clear breakdown of rewards earned from various activities on the platform.
 - Historical data of earnings over time.
+  <img src="https://github.com/user-attachments/assets/68eb1b54-e5eb-4d27-9b17-62d44f77d930" alt="earning"  height="500">
 
 ### 5. Leaderboard (New Feature)
 - Global leaderboard showcasing top performers on the platform.
@@ -39,11 +39,15 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
   - More quests completed = Higher XP
   - More bounties submitted = Higher XP
 - Encouraging healthy competition and motivation among users.
+  <img src="https://github.com/user-attachments/assets/c4e76f77-b485-4927-bffc-2397bd9eb11c" alt="leaderboard"  height="500">   <img src="https://github.com/user-attachments/assets/0bacc78b-476b-4b72-aeab-8b5266cc5f18" alt="leaderboard_info"  height="500">
 
 ### 6. Profile Screen
 - Display of user's personal information.
 - Showcase of professional details and achievements.
 - Option to edit and update profile information.
+
+  
+  <img src="https://github.com/user-attachments/assets/231c6d20-adda-4eac-b794-6dc064b43179" alt="dark1"  height="500">    <img src="https://github.com/user-attachments/assets/7a04fe7a-6013-40a2-ad54-6f5330df5c76" alt="dark2"  height="500">
 
 ## Purpose and Benefits
 
