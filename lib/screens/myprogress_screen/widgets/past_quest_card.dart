@@ -42,7 +42,7 @@ class PastQuestCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 209, 243, 210),
+                    color: colorScheme.secondary,
                     borderRadius: BorderRadius.circular(16)),
                 child: Text(
                   questStatus!,

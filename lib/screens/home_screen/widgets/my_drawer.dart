@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:stackup_app/screens/home_screen/widgets/my_drawer_tile.dart';
 import 'package:stackup_app/screens/authscreens/login_screen/login_screen.dart';
 import 'package:stackup_app/screens/settings/setting_screen.dart';
@@ -66,10 +68,26 @@ class MyDrawer extends StatelessWidget {
           ),
           MyDrawerTile(
             title: "HELP CENTER",
-            icon: Icons.help_center_outlined,
+            icon: FontAwesomeIcons.questionCircle,
             onTap: () {
               // Navigator.pop(context);
               _launchURL("https://stackuphelpcentre.zendesk.com/hc/en-us");
+            },
+          ),
+          MyDrawerTile(
+            title: "TERMS OF SERVICES",
+            icon: FontAwesomeIcons.fileShield,
+            onTap: () {
+              // Navigator.pop(context);
+              _launchURL("https://stackup.dev/earn/terms/");
+            },
+          ),
+          MyDrawerTile(
+            title: "PRIVACY POLICY",
+            icon: FontAwesomeIcons.userShield,
+            onTap: () {
+              // Navigator.pop(context);
+              _launchURL("https://stackup.dev/privacy/");
             },
           ),
           const Spacer(),
@@ -81,14 +99,24 @@ class MyDrawer extends StatelessWidget {
                 context: context,
                 builder: (context) {
                   return AlertDialog(
-                    title: const Text("Logout"),
-                    content: const Text("Are you sure you want to logout?"),
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
+                    title: Text(
+                      "Logout",
+                      style: GoogleFonts.poppins(),
+                    ),
+                    content: Text(
+                      "Are you sure you want to logout?",
+                      style: GoogleFonts.poppins(),
+                    ),
                     actions: [
                       TextButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: const Text("No"),
+                        child: Text(
+                          "No",
+                          style: GoogleFonts.poppins(color: Colors.red),
+                        ),
                       ),
                       TextButton(
                         onPressed: () async {
@@ -100,7 +128,10 @@ class MyDrawer extends StatelessWidget {
                                         onTap: () {},
                                       )));
                         },
-                        child: const Text("Yes"),
+                        child: Text(
+                          "Yes",
+                          style: GoogleFonts.poppins(),
+                        ),
                       ),
                     ],
                   );

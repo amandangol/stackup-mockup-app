@@ -1,5 +1,7 @@
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:stackup_app/screens/myprogress_screen/bounty_progress_screen.dart';
 import 'package:stackup_app/screens/myprogress_screen/models/myprogress_questmodel.dart';
 import 'package:stackup_app/screens/myprogress_screen/widgets/glance_card.dart';
 import 'package:stackup_app/screens/myprogress_screen/widgets/ongoin_quest_record_card.dart';
@@ -23,11 +25,7 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
     //   ..sort((a, b) => b.title.compareTo(a.title));
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            icon: Icon(Icons.leak_remove_outlined),
-            onPressed: () {
-              // Open drawer
-            }),
+        centerTitle: true,
         backgroundColor: Colors.transparent,
         title: Text(
           "My Progress",
@@ -53,64 +51,110 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
               const SizedBox(
                 height: 10,
               ),
-              Text(
-                "At a Glance",
-                style: GoogleFonts.poppins(
-                    color: colorScheme.inversePrimary,
-                    fontWeight: FontWeight.w500),
-              ),
               const SizedBox(
                 height: 10,
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 3,
-                child: ListView(
-                  shrinkWrap: true,
-                  // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //   crossAxisCount: , // Number of columns
-                  //   // crossAxisSpacing: 10.0,
-                  //   // mainAxisSpacing: 10.0,
-                  //   // childAspectRatio: 2 / 4, // Aspect ratio of each item
-                  // ),
-                  children: const [
-                    GlanceCard(
-                      icon: Icons.code,
-                      number: "4",
-                      text: "Submissions Due",
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    GlanceCard(
-                      icon: Icons.notes,
-                      number: "100",
-                      text: "Submitted",
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    GlanceCard(
-                      icon: Icons.emoji_emotions_outlined,
-                      number: "90",
-                      text: "Rewarded",
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    GlanceCard(
-                      icon: Icons.code,
-                      number: "299\$",
-                      text: "Total Quests Earning",
+              Theme(
+                data: Theme.of(context)
+                    .copyWith(dividerColor: Colors.transparent),
+                child: ExpansionTile(
+                  initiallyExpanded: true,
+                  leading: const Icon(Icons.visibility),
+                  title: Text(
+                    "At a Glance",
+                    style: GoogleFonts.poppins(
+                        color: colorScheme.inversePrimary,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  children: [
+                    ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      //   crossAxisCount: , // Number of columns
+                      //   // crossAxisSpacing: 10.0,
+                      //   // mainAxisSpacing: 10.0,
+                      //   // childAspectRatio: 2 / 4, // Aspect ratio of each item
+                      // ),
+                      children: const [
+                        GlanceCard(
+                          icon: Icons.code,
+                          number: "4",
+                          text: "Submissions Due",
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        GlanceCard(
+                          icon: Icons.notes,
+                          number: "100",
+                          text: "Submitted",
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        GlanceCard(
+                          icon: Icons.emoji_emotions_outlined,
+                          number: "90",
+                          text: "Rewarded",
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        GlanceCard(
+                          icon: Icons.code,
+                          number: "299\$",
+                          text: "Total Quests Earning",
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ),
-              Text(
-                "Quest Records",
-                style: GoogleFonts.poppins(
-                    color: colorScheme.inversePrimary,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w700),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Quest Records",
+                    style: GoogleFonts.poppins(
+                        color: colorScheme.inversePrimary,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BountyProgressScreen()));
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10),
+                          color: colorScheme.secondary),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Show Bounties Records",
+                            style: GoogleFonts.poppins(
+                                color: colorScheme.inversePrimary,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: colorScheme.inversePrimary,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 15,

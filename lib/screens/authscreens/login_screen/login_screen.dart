@@ -3,8 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:stackup_app/bottomnav/bottomNavWrapper.dart';
 import 'package:stackup_app/common_widgets/custom_button.dart';
 import 'package:stackup_app/common_widgets/custom_textfield.dart';
-import 'package:stackup_app/config/routes/routes_name.dart';
-import 'package:stackup_app/screens/home_screen/home_screen.dart';
 import 'package:stackup_app/services/auth/auth_service.dart';
 import 'package:stackup_app/services/auth/provider/auth_provider.dart';
 import 'package:stackup_app/screens/authscreens/signup_screen/signup_screen.dart';

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:stackup_app/config/routes/routes.dart';
 import 'package:stackup_app/config/routes/routes_name.dart';
 import 'package:stackup_app/firebase_options.dart';
+import 'package:stackup_app/services/auth/auth_gate.dart';
 import 'package:stackup_app/services/auth/provider/auth_provider.dart';
 import 'package:stackup_app/screens/splash_screen/splash_screen.dart';
 import 'package:stackup_app/themes/theme_provider.dart';

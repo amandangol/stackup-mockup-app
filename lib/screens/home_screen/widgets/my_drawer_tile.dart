@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyDrawerTile extends StatelessWidget {
   final String? title;
@@ -19,10 +20,10 @@ class MyDrawerTile extends StatelessWidget {
           style: TextStyle(
               color: colorScheme.inversePrimary,
               fontSize: 16,
-              letterSpacing: 4,
+              letterSpacing: 2,
               fontWeight: FontWeight.normal),
         ),
-        leading: Icon(
+        leading: FaIcon(
           icon,
           color: colorScheme.inversePrimary,
           size: 35,

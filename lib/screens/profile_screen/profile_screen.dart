@@ -8,7 +8,7 @@ class ProfileScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.person_outlined),
+          centerTitle: true,
           title: Text(
             "My Profile",
             style: GoogleFonts.poppins(color: colorScheme.inversePrimary),

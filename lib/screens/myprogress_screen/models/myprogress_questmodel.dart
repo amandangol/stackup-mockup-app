@@ -448,251 +448,128 @@ List<PastQuestRecord> pastQuests = [
     reward: "",
   ),
   PastQuestRecord(
-    title: "Quest 1 - Introduction to Programmable Wallets",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Your First Application on Linera",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 - Creating a Fungible Token on Linera",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Introduction to Linera",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Bounty Challenge 1 - Circle Programmable Wallets Writeup",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Interact with Programmable Wallets",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Bounty Challenge 2 - Build Your Wallet",
-    status: "Past",
-    rewardStatus: "Rejected",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Intro to USDC and Programmable Wallets",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - A Tour on Rust Semantics",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Tiptoeing Into Rust",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 - Diving Into Important Core Concepts",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Bounty: Building a Customized RAG Model",
-    status: "Past",
-    rewardStatus: "Not Submitted",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 4 - Capstone Project: Movie Recommender Application",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 - Atlas Vector Search with Custom Embeddings",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 5 - Retrieval Augmented Generation using Atlas Vector Search",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Introduction to Atlas Vector Search",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Overview of MongoDB & Atlas Search",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Cross-chain Messages",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 - Composing Linera Applications",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Logging & Testing in Linera",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Creating an NFT",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 - Creating a Fungible Asset",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title:
-        "Bounty: Create a DApp leveraging ZetaChain's omnichain and cross-chain messaging technology",
-    status: "Past",
-    rewardStatus: "Not Submitted",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Setting Up Your Development Environment",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Bounty: Ideathon",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Bounty: Build a Simple DeFi Swap dApp using Aptos TypeScript SDK",
-    status: "Past",
-    rewardStatus: "Not Submitted",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 – Forum App",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 – Routes and Controller",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Login Application",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Building a CLI application with Clap",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Learning The Rust Package Manager Cargo",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title:
-        "Quest 3 - Code Refactoring, Integrating Software Tests and Error Handling",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Introduction to FastAPI",
-    status: "Past",
-    rewardStatus: "Rejected",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Enhancing the FastAPI Server",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Creating a Basic API Server with FastAPI",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 - Building The Library",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 - Foolproofing Your API Client Library",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 1 - Learn How Computers Communicate",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "",
-  ),
-  PastQuestRecord(
-    title: "Quest 3 – ThreeJS Portfolio Website",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "\$1",
-  ),
-  PastQuestRecord(
-    title: "Quest 2 – ThreeJS Coordinates and Camera Movement",
-    status: "Past",
-    rewardStatus: "Rewarded",
-    reward: "\$2",
-  ),
-  PastQuestRecord(
     title: "Quest 1 – Get Started With ThreeJS",
     status: "Past",
     rewardStatus: "Rewarded",
     reward: "\$3",
+  ),
+];
+
+// quest_record.dart
+class OngoingBountyRecord {
+  final String title;
+  final String status;
+  final String submissionStatus;
+  final String endDate;
+
+  OngoingBountyRecord({
+    required this.title,
+    required this.status,
+    required this.submissionStatus,
+    required this.endDate,
+  });
+}
+
+class PastBountyRecord {
+  final String title;
+  final String status;
+  final String rewardStatus;
+  final String reward;
+
+  PastBountyRecord({
+    required this.title,
+    required this.status,
+    required this.rewardStatus,
+    required this.reward,
+  });
+}
+
+List<OngoingBountyRecord> onGoingBountyRecords = [
+  OngoingBountyRecord(
+    title: "GCP-Powered AI Solutions for Building on aelf",
+    status: "Ongoing",
+    submissionStatus: "In Progress",
+    endDate: "July 16, 2024, 09:45",
+  ),
+  OngoingBountyRecord(
+    title: "hackglobal 2024: Virtual Bounty Season 2",
+    status: "Ongoing",
+    submissionStatus: "In Progress",
+    endDate: "July 5, 2024, 09:45",
+  ),
+  OngoingBountyRecord(
+    title: "Bounty - Inspecting On-Chain Functions Involving Calls",
+    status: "Ongoing",
+    submissionStatus: "Submitted",
+    endDate: "July 12, 2024, 09:45",
+  ),
+  OngoingBountyRecord(
+    title: "hackglobal 2024: Virtual Bounty Season 2",
+    status: "Ongoing",
+    submissionStatus: "In Progress",
+    endDate: "July 5, 2024, 09:45",
+  ),
+  OngoingBountyRecord(
+    title: "Bounty: Create the next best Gaming dApp on Aptos",
+    status: "Ongoing",
+    submissionStatus: "In Progress",
+    endDate: "August 2, 2024, 09:45",
+  ),
+  OngoingBountyRecord(
+    title: "Bounty: Build the next best Bitcoin-focused DeFi app on ZetaChain",
+    status: "Ongoing",
+    submissionStatus: "In Progress",
+    endDate: "August 2, 2024, 09:45",
+  ),
+];
+
+List<PastBountyRecord> pastBounties = [
+  PastBountyRecord(
+    title: "Bounty: Sentiment Analysis with Python Project",
+    status: "Past",
+    rewardStatus: "Rewarded",
+    reward: "\$20",
+  ),
+  PastBountyRecord(
+    title: "Bounty: Upgrade StackUp Invaders",
+    status: "Past",
+    rewardStatus: "Rejected",
+    reward: "\$0",
+  ),
+  PastBountyRecord(
+    title: "Bounty - Build Upon the Affinidi Capstone",
+    status: "Past",
+    rewardStatus: "Rewarded",
+    reward: "\$1",
+  ),
+  PastBountyRecord(
+    title: "Bounty Challenge 1 - Data Identification and Submission",
+    status: "Past",
+    rewardStatus: "Rewarded",
+    reward: "\$30",
+  ),
+  PastBountyRecord(
+    title: "Bounty - Article on Aptos as Your Choice Blockchain",
+    status: "Past",
+    rewardStatus: "Rewarded",
+    reward: "\$10",
+  ),
+  PastBountyRecord(
+    title: "Bounty Challenge 1 - Circle Programmable Wallets Writeup",
+    status: "Past",
+    rewardStatus: "Rewarded",
+    reward: "\$5",
+  ),
+  PastBountyRecord(
+    title: "Bounty Challenge 2 - Build Your Wallet",
+    status: "Past",
+    rewardStatus: "Rejected",
+    reward: "\$5",
+  ),
+  PastBountyRecord(
+    title: "Bounty: Building a Customized RAG Model",
+    status: "Past",
+    rewardStatus: "Not Submitted",
+    reward: "\$5",
   ),
 ];

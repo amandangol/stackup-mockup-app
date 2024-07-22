@@ -7,6 +7,7 @@ class AuthService {
   //get current user
   User? getCurrentUser() {
     _firebaseAuth.currentUser;
+    return null;
   }
 
   //sign up

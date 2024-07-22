@@ -14,7 +14,7 @@ class EarningsScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           "Earnings",
-          style: GoogleFonts.poppins(color: colorScheme.primary),
+          style: GoogleFonts.poppins(color: colorScheme.inversePrimary),
         ),
         centerTitle: true,
       ),
@@ -92,7 +92,7 @@ class EarningsScreen extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: colorScheme.inversePrimary,
+                            backgroundColor: Colors.pink[50],
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
@@ -101,7 +101,7 @@ class EarningsScreen extends StatelessWidget {
                             "View History",
                             style: GoogleFonts.poppins(
                               fontSize: 16,
-                              color: colorScheme.onPrimary,
+                              color: colorScheme.primary,
                             ),
                           ),
                         ),
@@ -160,7 +160,7 @@ class EarningsScreen extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: colorScheme.inversePrimary,
+                          backgroundColor: Colors.green[50],
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -169,7 +169,7 @@ class EarningsScreen extends StatelessWidget {
                           "Request Withdrawal",
                           style: GoogleFonts.poppins(
                             fontSize: 16,
-                            color: colorScheme.onPrimary,
+                            color: colorScheme.primary,
                           ),
                         ),
                       ),

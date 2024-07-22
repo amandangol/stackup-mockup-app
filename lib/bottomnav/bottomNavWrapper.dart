@@ -1,6 +1,7 @@
 // lib/screens/home_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:stackup_app/screens/leaderboard/leaderboard_screen.dart';
 import 'package:stackup_app/screens/my_earnings/earning_screen.dart';
 import 'package:stackup_app/screens/home_screen/home_screen.dart';
 import 'package:stackup_app/screens/myprogress_screen/myprogress_screen.dart';
@@ -18,6 +19,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
     const HomeScreen(),
     const MyprogressScreen(),
     const EarningsScreen(),
+    LeaderboardScreen(),
     ProfileScreen(),
   ];
 
@@ -50,7 +52,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.leaderboard,
+                Icons.waves_outlined,
                 color: colorScheme.primary,
               ),
               label: 'Progress',
@@ -61,6 +63,13 @@ class _BottomNavHomeState extends State<BottomNavHome> {
                 color: colorScheme.primary,
               ),
               label: 'Balance',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.leaderboard_outlined,
+                color: colorScheme.primary,
+              ),
+              label: 'Leaderboard',
             ),
             BottomNavigationBarItem(
               icon: Icon(
