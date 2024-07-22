@@ -1,6 +1,5 @@
-// lib/screens/home_screen.dart
-
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stackup_app/screens/leaderboard/leaderboard_screen.dart';
 import 'package:stackup_app/screens/my_earnings/earning_screen.dart';
 import 'package:stackup_app/screens/home_screen/home_screen.dart';
@@ -8,6 +7,8 @@ import 'package:stackup_app/screens/myprogress_screen/myprogress_screen.dart';
 import 'package:stackup_app/screens/profile_screen/profile_screen.dart';
 
 class BottomNavHome extends StatefulWidget {
+  const BottomNavHome({super.key});
+
   @override
   _BottomNavHomeState createState() => _BottomNavHomeState();
 }
@@ -19,14 +20,21 @@ class _BottomNavHomeState extends State<BottomNavHome> {
     const HomeScreen(),
     const MyprogressScreen(),
     const EarningsScreen(),
-    LeaderboardScreen(),
-    ProfileScreen(),
+    const LeaderboardScreen(),
+    const ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+    // Provider.of<UserProvider>(context, listen: false).loadUsername();
+
+    super.initState();
   }
 
   @override
@@ -39,49 +47,30 @@ class _BottomNavHomeState extends State<BottomNavHome> {
           backgroundColor: colorScheme.secondary,
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          selectedLabelStyle: TextStyle(color: colorScheme.secondary),
-          unselectedItemColor: colorScheme.secondary,
+          selectedItemColor: colorScheme.inversePrimary,
+          unselectedItemColor: colorScheme.primary,
+          selectedLabelStyle: TextStyle(color: colorScheme.inversePrimary),
+          unselectedLabelStyle: TextStyle(color: colorScheme.primary),
           type: BottomNavigationBarType.fixed,
           items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: colorScheme.primary,
-              ),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.waves_outlined,
-                color: colorScheme.primary,
-              ),
-              label: 'Progress',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.money,
-                color: colorScheme.primary,
-              ),
-              label: 'Balance',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.leaderboard_outlined,
-                color: colorScheme.primary,
-              ),
-              label: 'Leaderboard',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person,
-                color: colorScheme.primary,
-              ),
-              label: 'Profile',
-            ),
+            _buildBottomNavItem(FontAwesomeIcons.home, 'Home'),
+            _buildBottomNavItem(FontAwesomeIcons.barsProgress, 'Progress'),
+            _buildBottomNavItem(FontAwesomeIcons.dollarSign, 'Earnings'),
+            _buildBottomNavItem(FontAwesomeIcons.rankingStar, 'Leaderboard'),
+            _buildBottomNavItem(FontAwesomeIcons.userAstronaut, 'Profile'),
           ],
         ),
         body: _pages[_selectedIndex],
       ),
+    );
+  }
+
+  BottomNavigationBarItem _buildBottomNavItem(IconData icon, String label) {
+    return BottomNavigationBarItem(
+      icon: FaIcon(icon),
+      activeIcon:
+          FaIcon(icon, color: Theme.of(context).colorScheme.inversePrimary),
+      label: label,
     );
   }
 }

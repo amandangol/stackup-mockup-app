@@ -11,26 +11,39 @@ String getErrorMessage(Object e) {
         return 'No user found with this email.';
       case 'wrong-password':
         return 'Incorrect password.';
+      case 'email-already-in-use':
+        return "Email is already registered";
+      case 'weak-password':
+        return "Password is too weak";
       default:
         return 'An unknown error occurred. Please try again.';
     }
   } else if (e is Exception) {
-    // Handle generic exceptions
-    switch (e.toString()) {
-      case 'Exception: invalid-email':
+    final message = e.toString();
+    if (message.contains('FirebaseAuthException')) {
+      if (message.contains('The email address is badly formatted.')) {
         return 'The email address is badly formatted.';
-      case 'Exception: user-not-found':
+      } else if (message.contains('user-not-found')) {
         return 'No user found with this email.';
-      case 'Exception: wrong-password':
+      } else if (message.contains(
+          'The email address is already in use by another account.')) {
+        return 'The email address is already in use by another account';
+      } else if (message.contains('wrong-password')) {
         return 'Incorrect password.';
-      case 'Exception: invalid-credential':
+      } else if (message.contains(
+          'The supplied auth credential is incorrect, malformed or has expired.')) {
         return "Email or password doesn't match.";
-      case 'Exception: email-already-in-use':
+      } else if (message.contains('email-already-in-use')) {
         return "Email is already registered";
-      case 'Exception: weak-password':
+      } else if (message.contains('weak-password')) {
         return "Password is too weak";
-      default:
+      } else if (message.contains('Password should be at least 6 characters')) {
+        return 'Password is too weak';
+      } else {
         return 'An unknown error occurred. Please try again.';
+      }
+    } else {
+      return 'An unknown error occurred. Please try again.';
     }
   } else {
     return 'An unknown error occurred. Please try again.';

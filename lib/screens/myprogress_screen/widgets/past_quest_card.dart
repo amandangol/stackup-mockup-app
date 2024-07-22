@@ -30,7 +30,7 @@ class PastQuestCard extends StatelessWidget {
                 color: colorScheme.inversePrimary, fontWeight: FontWeight.w500),
           ),
           subtitle: Text(
-            "${reward} Reward Earned",
+            "$reward Reward Earned",
             style: GoogleFonts.poppins(
                 color: colorScheme.inversePrimary, fontWeight: FontWeight.w500),
           ),

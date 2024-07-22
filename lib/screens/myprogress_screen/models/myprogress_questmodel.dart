@@ -103,7 +103,7 @@ List<PastQuestRecord> pastQuests = [
     title: "Meet Cody",
     status: "Past",
     rewardStatus: "Rewarded",
-    reward: "\4",
+    reward: "4",
   ),
   PastQuestRecord(
     title: "Upload GraphQL API to GitHub",
@@ -295,7 +295,7 @@ List<PastQuestRecord> pastQuests = [
     title: "Quest 4 - Capstone: Online Store",
     status: "Past",
     rewardStatus: "Rewarded",
-    reward: "\3",
+    reward: "3",
   ),
   PastQuestRecord(
     title: "Quest 3 - Building a Cross-Chain Counter",
@@ -343,7 +343,7 @@ List<PastQuestRecord> pastQuests = [
     title: "Quest 2: Exploring Starknet Contract Ecosystem",
     status: "Past",
     rewardStatus: "Rewarded",
-    reward: "\3",
+    reward: "3",
   ),
   PastQuestRecord(
     title: "Quest 4 - Build a Voting dApp (Backend)",

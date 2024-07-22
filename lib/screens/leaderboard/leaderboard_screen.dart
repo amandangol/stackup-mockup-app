@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:stackup_app/screens/leaderboard/model/leaderboard_model.dart';
 
 class LeaderboardScreen extends StatefulWidget {
+  const LeaderboardScreen({super.key});
+
   @override
   _LeaderboardScreenState createState() => _LeaderboardScreenState();
 }
@@ -20,7 +22,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   }
 
   Future<void> fetchLeaderboardData() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     setState(() {
       leaderboardItems = LeaderboardModel.leaderboard();
       currentUser = LeaderboardModel.getCurrentUser();
@@ -72,7 +74,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
 
   Widget _buildTopThree() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -87,8 +89,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
 
   Widget _buildCurrentUserPosition() {
     return Container(
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(12),
@@ -96,7 +98,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
             BoxShadow(
               color: Colors.black.withOpacity(0.1),
               blurRadius: 4,
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
             ),
           ],
         ),
@@ -114,7 +116,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Text(
                   currentUser.name,
                   style: GoogleFonts.poppins(
@@ -134,7 +136,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 Text(
                   '${currentUser.score}',
                   style: GoogleFonts.poppins(
@@ -162,7 +164,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Icon(icon, size: 40, color: color),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Container(
           width: 80,
           height: height,
@@ -180,7 +182,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                   color: Theme.of(context).colorScheme.inversePrimary,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 item.name,
                 textAlign: TextAlign.center,
@@ -188,7 +190,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                     color: Theme.of(context).colorScheme.inversePrimary,
                     fontSize: 12),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 '${item.score}',
                 style: GoogleFonts.poppins(
@@ -208,7 +210,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
       itemBuilder: (context, index) {
         final item = leaderboardItems[index + 3];
         return Card(
-          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           elevation: 4,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

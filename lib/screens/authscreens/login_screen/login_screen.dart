@@ -30,20 +30,20 @@ class _LoginScreenState extends State<LoginScreen> {
     final authService = AuthService();
     try {
       showLoadingDialog(context);
-      await authService.signInwithEmailandPassword(
+      await authService.signInWithEmailAndPassword(
         emailController.text,
         passwordController.text,
       );
       // hideLoadingDialog(context);
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => BottomNavHome()),
+        MaterialPageRoute(builder: (context) => const BottomNavHome()),
       );
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           backgroundColor: Colors.green,
-          content: Text("Logged in succesfully"),
+          content: const Text("Logged in succesfully"),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),

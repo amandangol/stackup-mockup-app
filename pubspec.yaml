@@ -42,6 +42,8 @@ dependencies:
   expansion_tile_card: ^3.0.0
   url_launcher: ^6.3.0
   font_awesome_flutter: ^10.7.0
+  cloud_firestore: ^4.17.5
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +70,11 @@ flutter:
   assets:
     - images/
     # - images/a_dot_ham.jpeg
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "images/icons/icon.png"
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

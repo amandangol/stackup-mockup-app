@@ -2,7 +2,9 @@ import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:stackup_app/config/routes/routes_name.dart';
+import 'package:stackup_app/screens/authscreens/provider/userprovider.dart';
 import 'package:stackup_app/screens/campaign_details/campaign_details.dart';
 import 'package:stackup_app/screens/home_screen/models/campaigns_model.dart';
 import 'package:stackup_app/screens/home_screen/widgets/campaign_card.dart';
@@ -26,7 +28,12 @@ class HomeScreen extends StatelessWidget {
         // backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          title: Text("Welcome, theodore"),
+          title: Consumer<UserProvider>(builder: (context, user, child) {
+            print("user${user.username}");
+            return Text(
+              user.username != null ? "Welcome, ${user.username}" : "Welcome",
+            );
+          }),
         ),
         drawer: const MyDrawer(),
         body: SingleChildScrollView(
@@ -37,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                 expandedColor: colorScheme.secondary,
                 expandedTextColor: colorScheme.inversePrimary,
                 initiallyExpanded: true,
-                leading: Icon(Icons.speaker_phone),
+                leading: const Icon(Icons.speaker_phone),
                 title: Text(
                   "New: Monthly Happenings Calender",
                   style: GoogleFonts.poppins(
@@ -67,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                               TextSpan(
                                 text: "Monthly Happenings Calendar",
                                 style: GoogleFonts.poppins(
-                                  color: Color.fromARGB(255, 192, 67, 58),
+                                  color: const Color.fromARGB(255, 192, 67, 58),
                                   decoration: TextDecoration.underline,
                                 ),
                                 recognizer: TapGestureRecognizer()

@@ -1,47 +1,76 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
-  //get instance of firebase auth
+  // Get instance of firebase auth
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  //get current user
+  // Get current user
   User? getCurrentUser() {
-    _firebaseAuth.currentUser;
+    return _firebaseAuth.currentUser;
+  }
+
+  Future<String?> getCurrentUsername() async {
+    User? user = getCurrentUser();
+    if (user != null) {
+      print("Current user UID: ${user.uid}");
+      DocumentSnapshot userDoc =
+          await _firestore.collection('users').doc(user.uid).get();
+      if (userDoc.exists) {
+        return userDoc.get('username') as String?;
+      } else {
+        print("User document does not exist for UID: ${user.uid}");
+      }
+    } else {
+      print("No current user");
+    }
     return null;
   }
 
-  //sign up
-  Future<UserCredential> signUpwithEmailandPassword(
-      String email, password) async {
-//try signup
+  // Sign up
+  Future<UserCredential> signUpWithEmailAndPassword(
+      String email, String password) async {
     try {
-      UserCredential userCredential = await _firebaseAuth
-          .createUserWithEmailAndPassword(email: email, password: password);
+      UserCredential userCredential =
+          await _firebaseAuth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      // Store username in firestore
+      // await _firestore.collection('users').doc(userCredential.user!.uid).set({
+      //   'email': email,
+      //   'username': username,
+      // });
+
       return userCredential;
-    }
-//catch any werrors
-    on FirebaseAuthException catch (e) {
-      throw Exception(e.code);
+    } on FirebaseAuthException catch (e) {
+      throw Exception('FirebaseAuthException: ${e.message}');
+    } catch (e) {
+      throw Exception('Unknown Exception: $e');
     }
   }
 
-  //sign in
-  Future<UserCredential> signInwithEmailandPassword(
-      String email, password) async {
-//try signin
+  // Sign in
+  Future<UserCredential> signInWithEmailAndPassword(
+      String email, String password) async {
     try {
-      UserCredential userCredential = await _firebaseAuth
-          .signInWithEmailAndPassword(email: email, password: password);
+      UserCredential userCredential =
+          await _firebaseAuth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
       return userCredential;
-    }
-//catch any werrors
-    on FirebaseAuthException catch (e) {
-      throw Exception(e.code);
+    } on FirebaseAuthException catch (e) {
+      throw Exception('FirebaseAuthException: ${e.message}');
+    } catch (e) {
+      throw Exception('Unknown Exception: $e');
     }
   }
 
-  //sign out
+  // Sign out
   Future<void> signOut() async {
-    return await _firebaseAuth.signOut();
+    await _firebaseAuth.signOut();
   }
 }

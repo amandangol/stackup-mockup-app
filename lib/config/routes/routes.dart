@@ -6,6 +6,7 @@ import 'package:stackup_app/screens/authscreens/login_screen/login_screen.dart';
 import 'package:stackup_app/screens/ongoing_campaigns/ongoing_campaigns.dart';
 import 'package:stackup_app/screens/authscreens/signup_screen/signup_screen.dart';
 import 'package:stackup_app/screens/splash_screen/splash_screen.dart';
+import 'package:stackup_app/services/auth/auth_gate.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -23,12 +24,14 @@ class Routes {
                   onTap: () {},
                 ));
       case RoutesName.homeScreen:
-        return MaterialPageRoute(builder: (context) => HomeScreen());
+        return MaterialPageRoute(builder: (context) => const HomeScreen());
       case RoutesName.ongoingScreen:
         return MaterialPageRoute(
-            builder: (context) => OngoingAndUpcomingCampaigns());
+            builder: (context) => const OngoingAndUpcomingCampaigns());
       case RoutesName.bottomNavHome:
-        return MaterialPageRoute(builder: (context) => BottomNavHome());
+        return MaterialPageRoute(builder: (context) => const BottomNavHome());
+      case RoutesName.authGate:
+        return MaterialPageRoute(builder: (context) => const AuthGate());
       default:
         return MaterialPageRoute(
             builder: (context) => const Scaffold(

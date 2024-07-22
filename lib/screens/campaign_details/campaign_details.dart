@@ -17,7 +17,7 @@ class CampaignDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Image.asset(
                   campaign!.image,

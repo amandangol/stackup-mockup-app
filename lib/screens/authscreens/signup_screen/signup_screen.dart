@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:stackup_app/bottomnav/bottomNavWrapper.dart';
 import 'package:stackup_app/common_widgets/custom_button.dart';
 import 'package:stackup_app/common_widgets/custom_textfield.dart';
+import 'package:stackup_app/config/routes/routes_name.dart';
 import 'package:stackup_app/screens/authscreens/login_screen/login_screen.dart';
 import 'package:stackup_app/services/auth/auth_service.dart';
 import 'package:stackup_app/services/auth/provider/auth_provider.dart';
@@ -25,6 +25,7 @@ class _LoginScreenState extends State<SignupScreen> {
 
   final TextEditingController confirmPasswordController =
       TextEditingController();
+  final TextEditingController usernameController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 
@@ -33,25 +34,22 @@ class _LoginScreenState extends State<SignupScreen> {
 
     try {
       showLoadingDialog(context);
-      await authService.signUpwithEmailandPassword(
+      await authService.signUpWithEmailAndPassword(
         emailController.text,
         passwordController.text,
+        // usernameController.text,
       );
+      print("${usernameController.text}aas");
       hideLoadingDialog(context);
 
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => BottomNavHome(),
-        ),
-      );
+      Navigator.pushNamed(context, RoutesName.bottomNavHome);
     } catch (e) {
       hideLoadingDialog(context);
 
       print("Error: $e");
       print("Error Type: ${e.runtimeType}");
 
-      String errorMessage = getErrorMessage(e as Exception);
+      String errorMessage = getErrorMessage(e);
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -118,6 +116,19 @@ class _LoginScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 10,
                 ),
+                // CustomTextField(
+                //     validator: (value) {
+                //       if (value == null || value.isEmpty) {
+                //         return "Please enter your stackiename";
+                //       }
+                //       return null;
+                //     },
+                //     controller: usernameController,
+                //     hintText: "Stackiename",
+                //     obscureText: false),
+                // const SizedBox(
+                //   height: 10,
+                // ),
                 CustomTextField(
                     suffixIcon: value.isObscure
                         ? Icons.visibility
