@@ -40,7 +40,7 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 
   <img src="https://github.com/user-attachments/assets/68eb1b54-e5eb-4d27-9b17-62d44f77d930" alt="earning"  height="500">
 
-### 5. Leaderboard (New Feature)
+### 5. Leaderboard
 
 - Global leaderboard showcasing top performers on the platform.
 - User rankings based on experience points (XP).
