@@ -22,7 +22,7 @@ class GlanceCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: colorScheme.primary,
+              color: const Color.fromARGB(255, 245, 234, 238),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon),

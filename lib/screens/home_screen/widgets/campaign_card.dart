@@ -70,7 +70,9 @@ class CampaignCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 209, 243, 210),
+                    color: campaignStatus == "Past"
+                        ? colorScheme.surface
+                        : const Color.fromARGB(255, 209, 243, 210),
                     borderRadius: BorderRadius.circular(16)),
                 child: Text(
                   campaignStatus!,

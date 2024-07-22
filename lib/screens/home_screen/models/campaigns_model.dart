@@ -2,41 +2,41 @@
 import 'package:flutter/material.dart';
 
 class Campaign {
-  final String image;
-  final String title;
-  final String subTitle;
-  final String campaignStatus;
-  final String rewardPool;
-  final String questCount;
-  final String startDate;
-  final String endDate;
-  final String endsInDay;
-  final String endsInHours;
-  final String endsInMins;
-  final bool hasDays;
-  final String description;
-  final String learningOutcomes;
-  final List<Quest> quests;
+  final String? image;
+  final String? title;
+  final String? subTitle;
+  final String? campaignStatus;
+  final String? rewardPool;
+  final String? questCount;
+  final String? startDate;
+  final String? endDate;
+  final String? endsInDay;
+  final String? endsInHours;
+  final String? endsInMins;
+  final bool? hasDays;
+  final String? description;
+  final String? learningOutcomes;
+  final List<Quest>? quests;
 
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   Campaign({
-    required this.image,
-    required this.title,
-    required this.subTitle,
-    required this.campaignStatus,
-    required this.rewardPool,
-    required this.questCount,
-    required this.startDate,
-    required this.endDate,
-    required this.endsInDay,
-    required this.endsInHours,
-    required this.endsInMins,
-    required this.hasDays,
-    required this.description,
-    required this.learningOutcomes,
-    required this.quests,
-    required this.onTap,
+    this.image,
+    this.title,
+    this.subTitle,
+    this.campaignStatus,
+    this.rewardPool,
+    this.questCount,
+    this.startDate,
+    this.endDate,
+    this.endsInDay,
+    this.endsInHours,
+    this.endsInMins,
+    this.hasDays,
+    this.description,
+    this.learningOutcomes,
+    this.quests,
+    this.onTap,
   });
 }
 
@@ -199,6 +199,49 @@ List<Campaign> campaigns = [
       ),
     ],
     onTap: () {},
+  ),
+];
+
+final List<Campaign> endedCampaigns = [
+  Campaign(
+    image: "images/flask_campaign.png",
+    title: "Developing Web Applications with Flask",
+    questCount: "3",
+    rewardPool: "\$2,950",
+    startDate: "Jun 28, 2024, 12:00",
+    endDate: "Jul 14, 2024, 12:00",
+  ),
+  Campaign(
+    image: "images/threejs_campaign.png",
+    title: "3D Web Design with ThreeJS",
+    questCount: "3",
+    rewardPool: "Mixed Reward Pool",
+    startDate: "Jun 21, 2024, 12:00",
+    endDate: "Jul 7, 2024, 12:00",
+  ),
+  Campaign(
+    image: "images/rust_api_campaign.png",
+    title: "Building an API Client Library with Rust I",
+    questCount: "3",
+    rewardPool: "\$3,000",
+    startDate: "Jun 14, 2024, 12:00",
+    endDate: "Jun 27, 2024, 12:00",
+  ),
+  Campaign(
+    image: "images/fastapi_campaign.png",
+    title: "Developing an API Server with FastAPI",
+    questCount: "3",
+    rewardPool: "\$3,150",
+    startDate: "Jun 7, 2024, 12:00",
+    endDate: "Jun 23, 2024, 12:00",
+  ),
+  Campaign(
+    image: "images/move_aptos_campaign.png",
+    title: "Move on Aptos II",
+    questCount: "5",
+    rewardPool: "\$8,200",
+    startDate: "May 17, 2024, 12:00",
+    endDate: "Jun 7, 2024, 12:00",
   ),
 ];
 

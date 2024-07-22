@@ -26,7 +26,7 @@ class MyDrawerTile extends StatelessWidget {
         leading: FaIcon(
           icon,
           color: colorScheme.inversePrimary,
-          size: 35,
+          size: 25,
         ),
         onTap: onTap,
       ),

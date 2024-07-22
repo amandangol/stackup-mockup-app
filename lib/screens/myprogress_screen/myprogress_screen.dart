@@ -111,13 +111,13 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
             shrinkWrap: true,
             children: const [
               GlanceCard(
-                icon: Icons.code,
+                icon: Icons.code_off_outlined,
                 number: "4",
                 text: "Submissions Due",
               ),
               SizedBox(height: 5),
               GlanceCard(
-                icon: Icons.notes,
+                icon: Icons.check_box_outlined,
                 number: "100",
                 text: "Submitted",
               ),
@@ -129,7 +129,7 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
               ),
               SizedBox(height: 5),
               GlanceCard(
-                icon: Icons.code,
+                icon: Icons.star_border,
                 number: "299\$",
                 text: "Total Quests Earning",
               ),

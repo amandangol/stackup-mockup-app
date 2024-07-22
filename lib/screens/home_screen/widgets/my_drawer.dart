@@ -7,9 +7,14 @@ import 'package:stackup_app/screens/settings/setting_screen.dart';
 import 'package:stackup_app/services/auth/auth_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class MyDrawer extends StatelessWidget {
+class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
 
+  @override
+  State<MyDrawer> createState() => _MyDrawerState();
+}
+
+class _MyDrawerState extends State<MyDrawer> {
   void logout() async {
     final authService = AuthService();
     await authService.signOut();
@@ -20,6 +25,14 @@ class MyDrawer extends StatelessWidget {
     if (!await launchUrl(uri)) {
       throw 'Could not launch $url';
     }
+  }
+
+  bool _isBalanceVisible = false;
+
+  void _toggleBalanceVisibility() {
+    setState(() {
+      _isBalanceVisible = !_isBalanceVisible;
+    });
   }
 
   @override
@@ -47,6 +60,48 @@ class MyDrawer extends StatelessWidget {
           ),
           const SizedBox(
             height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: ListTile(
+              contentPadding: const EdgeInsets.all(8),
+              title: _isBalanceVisible
+                  ? Text(
+                      '\$5', // Replace with your actual balance
+                      style: GoogleFonts.poppins(
+                          color: colorScheme.inversePrimary,
+                          fontSize: 18,
+                          letterSpacing: 2,
+                          fontWeight: FontWeight.bold),
+                    )
+                  : Text(
+                      "Balance Hidden", // Placeholder when balance is hidden
+                      style: TextStyle(
+                          color: colorScheme.inversePrimary,
+                          fontSize: 16,
+                          letterSpacing: 2,
+                          fontWeight: FontWeight.normal),
+                    ),
+              leading: FaIcon(
+                FontAwesomeIcons.wallet,
+                color: colorScheme.inversePrimary,
+                size: 25,
+              ),
+              trailing: IconButton(
+                icon: _isBalanceVisible
+                    ? FaIcon(
+                        FontAwesomeIcons.eyeSlash,
+                        color: colorScheme.inversePrimary,
+                        size: 25,
+                      )
+                    : FaIcon(
+                        FontAwesomeIcons.eye,
+                        color: colorScheme.inversePrimary,
+                        size: 25,
+                      ),
+                onPressed: _toggleBalanceVisibility,
+              ),
+            ),
           ),
           MyDrawerTile(
             title: "HOME",
@@ -138,6 +193,58 @@ class MyDrawer extends StatelessWidget {
                 },
               );
             },
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                onPressed: () {
+                  _launchURL("https://discord.gg/3x3h2z6A63");
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.discord,
+                  color: Color.fromARGB(255, 34, 17, 37),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  _launchURL("https://stackup.dev/");
+                },
+                child: Image.asset(
+                  "images/stackup.jpeg",
+                  height: 20,
+                  width: 20,
+                ),
+              ),
+              IconButton(
+                onPressed: () {
+                  _launchURL("https://twitter.com/StackUpHQ");
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.twitter,
+                  color: Colors.blue,
+                ),
+              ),
+              IconButton(
+                onPressed: () {
+                  _launchURL("https://www.facebook.com/StackUpHQ");
+                },
+                icon: const FaIcon(
+                  FontAwesomeIcons.facebook,
+                  color: Colors.blue,
+                ),
+              ),
+              IconButton(
+                onPressed: () {
+                  _launchURL(
+                      "https://www.linkedin.com/company/stackupofficial/");
+                },
+                icon: FaIcon(
+                  FontAwesomeIcons.linkedin,
+                  color: Colors.blue,
+                ),
+              ),
+            ],
           ),
           const SizedBox(
             height: 50,

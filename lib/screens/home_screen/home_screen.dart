@@ -1,6 +1,7 @@
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:stackup_app/config/routes/routes_name.dart';
@@ -44,7 +45,10 @@ class HomeScreen extends StatelessWidget {
                 expandedColor: colorScheme.secondary,
                 expandedTextColor: colorScheme.inversePrimary,
                 initiallyExpanded: true,
-                leading: const Icon(Icons.speaker_phone),
+                leading: const FaIcon(
+                  FontAwesomeIcons.bullhorn,
+                  color: Color.fromARGB(255, 159, 60, 53),
+                ),
                 title: Text(
                   "New: Monthly Happenings Calender",
                   style: GoogleFonts.poppins(
@@ -175,44 +179,48 @@ class HomeScreen extends StatelessWidget {
                       style: GoogleFonts.poppins(
                           fontSize: 20, fontWeight: FontWeight.w500),
                     ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "See All",
-                        style: GoogleFonts.poppins(
-                            color: colorScheme.inversePrimary),
-                      ),
-                    ),
+                    // TextButton(
+                    //   onPressed: () {},
+                    //   child: Text(
+                    //     "See All",
+                    //     style: GoogleFonts.poppins(
+                    //         color: colorScheme.inversePrimary),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
-              CampaignCard(
-                image: "images/flask_campaign.png",
-                title: "Developing Web Applications with Flask",
-                subTitle: "",
-                campaignStatus: "Past",
-                rewardPool: "\$2950",
-                questCount: "3",
-                startDate: "Jun 28, 2024, 12:00",
-                endDate: "Jul 14, 2024, 12:00",
-                endsInDay: "",
-                endsInHours: "",
-                endsInMins: "",
-                hasDays: false,
-              ),
-              CampaignCard(
-                image: "images/threejs_campaign.png",
-                title: "3D Web Design with ThreeJS",
-                subTitle: "",
-                campaignStatus: "Past",
-                rewardPool: "Mixed",
-                questCount: "3",
-                startDate: "Jun 21, 2024, 12:00",
-                endDate: "Jul 7, 2024, 12:00",
-                endsInDay: "",
-                endsInHours: "",
-                endsInMins: "",
-                hasDays: false,
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: endedCampaigns.length,
+                itemBuilder: (context, index) {
+                  final campaign = endedCampaigns[index];
+                  return CampaignCard(
+                    image: campaign.image,
+                    title: campaign.title,
+                    subTitle: "",
+                    campaignStatus: "Past",
+                    questCount: campaign.questCount,
+                    rewardPool: campaign.rewardPool,
+                    startDate: campaign.startDate,
+                    endDate: campaign.endDate,
+                    endsInDay: "",
+                    endsInHours: "",
+                    endsInMins: "",
+                    hasDays: false,
+                    onTap: () {
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => CampaignDetails(
+                      //       campaign: campaign,
+                      //     ),
+                      //   ),
+                      // );
+                    },
+                  );
+                },
               ),
             ],
           ),

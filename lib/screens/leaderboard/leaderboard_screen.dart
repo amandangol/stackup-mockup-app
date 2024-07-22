@@ -31,6 +31,30 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     });
   }
 
+  void _showInfoDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Leaderboard Info',
+              style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+          content: Text(
+            "The more bounties and quests you complete, the more XP you gain. Finish in the top 3 and get a chance to win an exclusive prize!",
+            style: GoogleFonts.poppins(),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Got it!', style: GoogleFonts.poppins()),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -42,6 +66,12 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.info_outline, color: colorScheme.inversePrimary),
+            onPressed: _showInfoDialog,
+          ),
+        ],
       ),
       body: isLoading
           ? Center(
@@ -138,7 +168,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  '${currentUser.score}',
+                  '${currentUser.score}XP',
                   style: GoogleFonts.poppins(
                     color: Theme.of(context).colorScheme.inversePrimary,
                     fontSize: 18,
@@ -192,7 +222,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
               ),
               const SizedBox(height: 4),
               Text(
-                '${item.score}',
+                '${item.score}XP',
                 style: GoogleFonts.poppins(
                     color: Theme.of(context).colorScheme.inversePrimary,
                     fontWeight: FontWeight.bold),
@@ -225,7 +255,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
             ),
             title: Text(item.name),
             trailing: Text(
-              '${item.score}',
+              '${item.score}XP',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 16),
             ),

@@ -9,29 +9,32 @@ class ExpansionTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    return ExpansionTile(
-      initiallyExpanded: false,
-      title: Text(
-        title!,
-        style: GoogleFonts.poppins(
-            fontSize: 16,
-            fontWeight: FontWeight.w700,
-            color: colorScheme.inversePrimary),
-      ),
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                description!,
-                style: GoogleFonts.poppins(color: colorScheme.inversePrimary),
-              ),
-            ],
-          ),
+    return Theme(
+      data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+      child: ExpansionTile(
+        initiallyExpanded: false,
+        title: Text(
+          title!,
+          style: GoogleFonts.poppins(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: colorScheme.inversePrimary),
         ),
-      ],
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  description!,
+                  style: GoogleFonts.poppins(color: colorScheme.inversePrimary),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
