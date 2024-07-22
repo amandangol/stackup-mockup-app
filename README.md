@@ -60,7 +60,7 @@ While this README describes a conceptual mock-up, the actual development of the 
 - Implementing efficient data synchronization between the mobile app and StackUp servers.
 - Optimizing the app for performance across various mobile devices.
 
-## NOTE: The link for the APK file is [HERE](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) . You can install it on your device and test it. 🥲
+## NOTE: The link for the APK file is [HERE](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) . You can install it on your Android device and test it. (Compatible with Android for now) 🥲
 
 ## Conclusion
 
