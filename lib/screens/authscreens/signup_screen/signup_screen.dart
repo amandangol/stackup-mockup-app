@@ -133,6 +133,8 @@ class _LoginScreenState extends State<SignupScreen> {
                   height: 25,
                 ),
                 CustomTextField(
+                    textInputAction: TextInputAction.next,
+                    prefixIcon: Icons.email_outlined,
                     labelText: "Email",
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -147,6 +149,8 @@ class _LoginScreenState extends State<SignupScreen> {
                   height: 10,
                 ),
                 CustomTextField(
+                    textInputAction: TextInputAction.next,
+                    prefixIcon: Icons.person_outline,
                     labelText: "Stackiename",
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -161,6 +165,8 @@ class _LoginScreenState extends State<SignupScreen> {
                   height: 10,
                 ),
                 CustomTextField(
+                    textInputAction: TextInputAction.next,
+                    prefixIcon: Icons.lock_outline,
                     labelText: "Password",
                     suffixIcon: value.isObscure
                         ? Icons.visibility_off
@@ -169,6 +175,9 @@ class _LoginScreenState extends State<SignupScreen> {
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return "Please enter your password";
+                      }
+                      if (value != passwordController.text) {
+                        return "Confirm password doesn't match the password";
                       }
                       return null;
                     },
@@ -179,6 +188,8 @@ class _LoginScreenState extends State<SignupScreen> {
                   height: 10,
                 ),
                 CustomTextField(
+                  textInputAction: TextInputAction.done,
+                  prefixIcon: Icons.lock_outline,
                   labelText: "Confirm Password",
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -187,6 +198,7 @@ class _LoginScreenState extends State<SignupScreen> {
                     if (value != passwordController.text) {
                       return "Confirm password doesn't match the password";
                     }
+
                     return null;
                   },
                   controller: confirmPasswordController,

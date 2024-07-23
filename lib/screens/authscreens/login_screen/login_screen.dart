@@ -112,6 +112,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 25,
                   ),
                   CustomTextField(
+                      textInputAction: TextInputAction.next,
+                      prefixIcon: Icons.email_outlined,
                       labelText: "Email",
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -126,6 +128,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 10,
                   ),
                   CustomTextField(
+                      textInputAction: TextInputAction.done,
+                      prefixIcon: Icons.lock_outline,
                       labelText: "Password",
                       suffixIcon: value.isObscure
                           ? Icons.visibility

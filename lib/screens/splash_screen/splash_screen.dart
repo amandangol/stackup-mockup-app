@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
           AnimatedTextKit(
             animatedTexts: [
               TypewriterAnimatedText(
-                '          Learn and Earn',
+                '          LEARN and EARN',
                 textStyle: GoogleFonts.anton(fontSize: 20, letterSpacing: 2),
                 speed: const Duration(milliseconds: 50),
               ),

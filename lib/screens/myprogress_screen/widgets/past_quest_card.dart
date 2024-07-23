@@ -56,11 +56,26 @@ class PastQuestCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                    color: colorScheme.secondary,
+                    color: rewardStatus
+                            .toString()
+                            .toLowerCase()
+                            .contains("rewarded")
+                        ? const Color.fromARGB(255, 209, 244, 211)
+                        : rewardStatus
+                                .toString()
+                                .toLowerCase()
+                                .contains("rejected")
+                            ? const Color.fromARGB(255, 232, 191, 188)
+                            : rewardStatus
+                                    .toString()
+                                    .toLowerCase()
+                                    .contains("approved")
+                                ? const Color.fromARGB(255, 234, 231, 200)
+                                : colorScheme.secondary,
                     borderRadius: BorderRadius.circular(16)),
                 child: Text(
                   rewardStatus!,
-                  style: GoogleFonts.poppins(color: colorScheme.inversePrimary),
+                  style: GoogleFonts.poppins(color: colorScheme.primary),
                 ),
               ),
             ],

@@ -14,6 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
@@ -26,11 +27,9 @@ class HomeScreen extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return SafeArea(
       child: Scaffold(
-        // backgroundColor: Theme.of(context).colorScheme.surface,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           title: Consumer<UserProvider>(builder: (context, user, child) {
-            print("user${user.username}");
             return Text(
               user.username != null
                   ? "Welcome, ${user.username}"
@@ -40,10 +39,7 @@ class HomeScreen extends StatelessWidget {
           }),
           actions: [
             IconButton(
-              icon: const Icon(
-                Icons.notifications_outlined,
-                size: 26,
-              ),
+              icon: const Icon(Icons.notifications_outlined, size: 26),
               onPressed: () {
                 Navigator.pushNamed(context, RoutesName.notifiScreen);
               },
@@ -51,11 +47,10 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
         drawer: const MyDrawer(),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ExpansionTileCard(
+        body: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: ExpansionTileCard(
                 expandedColor: colorScheme.secondary,
                 expandedTextColor: colorScheme.inversePrimary,
                 initiallyExpanded: true,
@@ -77,9 +72,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        const SizedBox(height: 10),
                         RichText(
                           text: TextSpan(
                             style: GoogleFonts.poppins(
@@ -108,9 +101,7 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        const SizedBox(height: 10),
                         const Text(
                           "Jul 04, 2024",
                           style: TextStyle(color: Colors.grey),
@@ -120,12 +111,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
+            ),
+            SliverPadding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
+              sliver: SliverToBoxAdapter(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -147,14 +137,10 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: campaigns.length,
-                itemBuilder: (context, index) {
-                  print(campaigns.length);
-                  print(campaigns[index].title);
-                  print(campaigns[index].toString());
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
                   final campaign = campaigns[index];
                   return CampaignCard(
                     image: campaign.image!,
@@ -181,34 +167,23 @@ class HomeScreen extends StatelessWidget {
                     },
                   );
                 },
+                childCount: campaigns.length,
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Ended",
-                      style: GoogleFonts.poppins(
-                          fontSize: 20, fontWeight: FontWeight.w500),
-                    ),
-                    // TextButton(
-                    //   onPressed: () {},
-                    //   child: Text(
-                    //     "See All",
-                    //     style: GoogleFonts.poppins(
-                    //         color: colorScheme.inversePrimary),
-                    //   ),
-                    // ),
-                  ],
+            ),
+            SliverPadding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5),
+              sliver: SliverToBoxAdapter(
+                child: Text(
+                  "Ended",
+                  style: GoogleFonts.poppins(
+                      fontSize: 20, fontWeight: FontWeight.w500),
                 ),
               ),
-              ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: endedCampaigns.length,
-                itemBuilder: (context, index) {
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
                   final campaign = endedCampaigns[index];
                   return CampaignCard(
                     image: campaign.image!,
@@ -224,20 +199,14 @@ class HomeScreen extends StatelessWidget {
                     endsInMins: "",
                     hasDays: false,
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => CampaignDetails(
-                      //       campaign: campaign,
-                      //     ),
-                      //   ),
-                      // );
+                      // Navigator.push logic here if needed
                     },
                   );
                 },
+                childCount: endedCampaigns.length,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stackup_app/screens/myprogress_screen/bounty_progress_screen.dart';
 import 'package:stackup_app/screens/myprogress_screen/models/myprogress_questmodel.dart';
@@ -16,6 +17,8 @@ class MyprogressScreen extends StatefulWidget {
 
 class _MyprogressScreenState extends State<MyprogressScreen> {
   bool showOngoingQuests = true;
+  String? ongoingFilter;
+  String? pastFilter;
   late Future<void> _dataLoadingFuture;
 
   @override
@@ -26,6 +29,160 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
 
   Future<void> _loadData() async {
     await Future.delayed(const Duration(seconds: 1));
+  }
+
+  void _showFilterOptions(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return Container(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      showOngoingQuests
+                          ? "Ongoing Campaign Filters"
+                          : "Past Campaign Filters",
+                      style: GoogleFonts.poppins(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500)),
+                  const SizedBox(height: 16),
+                  Wrap(
+                    spacing: 8,
+                    children: showOngoingQuests
+                        ? [
+                            FilterChip(
+                              label: Text(
+                                "All",
+                                style: GoogleFonts.poppins(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .inversePrimary),
+                              ),
+                              selected: ongoingFilter == null,
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  ongoingFilter =
+                                      selected ? null : ongoingFilter;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                            FilterChip(
+                              label: Text("Submitted",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: ongoingFilter == "Submitted",
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  ongoingFilter = selected ? "Submitted" : null;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                            FilterChip(
+                              label: Text("In Progress",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: ongoingFilter == "In Progress",
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  ongoingFilter =
+                                      selected ? "In Progress" : null;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                          ]
+                        : [
+                            FilterChip(
+                              label: Text("All",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: pastFilter == null,
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  pastFilter = selected ? null : pastFilter;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                            FilterChip(
+                              label: Text("Rewarded",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: pastFilter == "Rewarded",
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  pastFilter = selected ? "Rewarded" : null;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                            FilterChip(
+                              label: Text("Rejected",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: pastFilter == "Rejected",
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  pastFilter = selected ? "Rejected" : null;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                            FilterChip(
+                              label: Text("Under Review",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: pastFilter == "Under Review",
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  pastFilter = selected ? "Under Review" : null;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                            FilterChip(
+                              label: Text("Approved",
+                                  style: GoogleFonts.poppins(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .inversePrimary)),
+                              selected: pastFilter == "Approved",
+                              onSelected: (bool selected) {
+                                setState(() {
+                                  pastFilter = selected ? "Approved" : null;
+                                });
+                                this.setState(() {});
+                              },
+                            ),
+                          ],
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
   }
 
   @override
@@ -98,7 +255,7 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
-        initiallyExpanded: true,
+        initiallyExpanded: false,
         leading: const Icon(Icons.visibility),
         title: Text(
           "At a Glance",
@@ -151,35 +308,39 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
               fontSize: 17,
               fontWeight: FontWeight.w700),
         ),
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const BountyProgressScreen()));
-          },
-          child: Container(
-            padding: const EdgeInsets.all(5),
-            decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.circular(10),
-                color: colorScheme.secondary),
-            child: Row(
-              children: [
-                Text(
-                  "Show Bounties Records",
-                  style: GoogleFonts.poppins(
+        Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const BountyProgressScreen()));
+              },
+              child: Container(
+                padding: const EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    border: Border.all(),
+                    borderRadius: BorderRadius.circular(10),
+                    color: colorScheme.secondary),
+                child: Row(
+                  children: [
+                    Text(
+                      "Show Bounties Records",
+                      style: GoogleFonts.poppins(
+                          color: colorScheme.inversePrimary,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w700),
+                    ),
+                    Icon(
+                      Icons.arrow_forward,
                       color: colorScheme.inversePrimary,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w700),
+                    ),
+                  ],
                 ),
-                Icon(
-                  Icons.arrow_forward,
-                  color: colorScheme.inversePrimary,
-                ),
-              ],
+              ),
             ),
-          ),
+          ],
         ),
       ],
     );
@@ -235,19 +396,37 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
             ),
           ),
         ),
+        const Spacer(),
+        IconButton(
+          icon: const FaIcon(FontAwesomeIcons.sliders),
+          onPressed: () => _showFilterOptions(context),
+        ),
       ],
     );
   }
 
   Widget _buildQuestList(ColorScheme colorScheme) {
+    List<dynamic> filteredQuests = showOngoingQuests
+        ? ongoingFilter == null
+            ? onGoingquestRecords
+            : onGoingquestRecords
+                .where((quest) => quest.submissionStatus == ongoingFilter)
+                .toList()
+        : pastFilter == null
+            ? pastQuests.reversed.toList()
+            : pastQuests
+                .where((quest) => quest.rewardStatus == pastFilter)
+                .toList()
+                .reversed
+                .toList();
+
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount:
-          showOngoingQuests ? onGoingquestRecords.length : pastQuests.length,
+      itemCount: filteredQuests.length,
       itemBuilder: (context, index) {
         if (showOngoingQuests) {
-          final ongoingQuest = onGoingquestRecords[index];
+          final ongoingQuest = filteredQuests[index];
           return Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: OngoingQuestRecordsCard(
@@ -258,9 +437,7 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
                 submissionStatus: ongoingQuest.submissionStatus),
           );
         } else {
-          List<PastQuestRecord> reversedPastQuests =
-              List.from(pastQuests.reversed);
-          final pastQuest = reversedPastQuests[index];
+          final pastQuest = filteredQuests[index];
           return Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: PastQuestCard(

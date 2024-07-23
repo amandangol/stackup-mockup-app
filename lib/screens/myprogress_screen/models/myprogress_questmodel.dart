@@ -504,12 +504,6 @@ List<OngoingBountyRecord> onGoingBountyRecords = [
     endDate: "July 12, 2024, 09:45",
   ),
   OngoingBountyRecord(
-    title: "hackglobal 2024: Virtual Bounty Season 2",
-    status: "Ongoing",
-    submissionStatus: "In Progress",
-    endDate: "July 5, 2024, 09:45",
-  ),
-  OngoingBountyRecord(
     title: "Bounty: Create the next best Gaming dApp on Aptos",
     status: "Ongoing",
     submissionStatus: "In Progress",
@@ -540,7 +534,7 @@ List<PastBountyRecord> pastBounties = [
     title: "Bounty - Build Upon the Affinidi Capstone",
     status: "Past",
     rewardStatus: "Rewarded",
-    reward: "\$1",
+    reward: "\$50",
   ),
   PastBountyRecord(
     title: "Bounty Challenge 1 - Data Identification and Submission",
@@ -564,12 +558,12 @@ List<PastBountyRecord> pastBounties = [
     title: "Bounty Challenge 2 - Build Your Wallet",
     status: "Past",
     rewardStatus: "Rejected",
-    reward: "\$5",
+    reward: "\$0",
   ),
   PastBountyRecord(
     title: "Bounty: Building a Customized RAG Model",
     status: "Past",
     rewardStatus: "Not Submitted",
-    reward: "\$5",
+    reward: "No",
   ),
 ];

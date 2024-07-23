@@ -185,6 +185,7 @@ class CampaignDetails extends StatelessWidget {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
+        initiallyExpanded: true,
         title: Text("Quests",
             style: textTheme.titleMedium?.copyWith(
                 color: colorScheme.inversePrimary,

@@ -7,6 +7,7 @@ class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ProfileScreenState createState() => _ProfileScreenState();
 }
 
@@ -77,9 +78,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             }
           });
         },
-        child: Icon(_isEditing ? Icons.save : Icons.edit),
         backgroundColor: colorScheme.secondary,
         foregroundColor: colorScheme.onSecondary,
+        child: Icon(_isEditing ? Icons.save : Icons.edit),
       ),
     );
   }
@@ -148,10 +149,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildProfileInfo(ColorScheme colorScheme) {
     return Card(
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       color: colorScheme.secondary,
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -160,10 +161,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: colorScheme.primary,
+                color: colorScheme.inversePrimary,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             _buildInfoItem('Nationality', _nationalityController, colorScheme),
             _buildInfoItem('Career Level', _careerLevelController, colorScheme),
           ],
@@ -196,7 +197,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     controller: controller,
                     style: GoogleFonts.poppins(
                         fontSize: 16, color: colorScheme.onSurface),
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       contentPadding:
                           EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -215,10 +216,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildExpertiseAreas(ColorScheme colorScheme) {
     return Card(
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       color: colorScheme.secondary,
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -227,10 +228,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: colorScheme.primary,
+                color: colorScheme.inversePrimary,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -252,10 +253,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget _buildTechStacks(ColorScheme colorScheme) {
     return Card(
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       color: colorScheme.secondary,
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -264,10 +265,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: colorScheme.primary,
+                color: colorScheme.inversePrimary,
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -290,8 +291,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget _buildChip(String label, ColorScheme colorScheme) {
     return InputChip(
       label: Text(label),
-      backgroundColor: colorScheme.primaryContainer,
-      labelStyle: GoogleFonts.poppins(color: colorScheme.inversePrimary),
+      backgroundColor: colorScheme.primary,
+      labelStyle: GoogleFonts.poppins(
+          color: _isEditing ? colorScheme.secondary : colorScheme.onSurface),
       onDeleted: _isEditing
           ? () {
               setState(() {
@@ -318,7 +320,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             onChanged: (value) {
               newItem = value;
             },
-            decoration: InputDecoration(hintText: "Enter new item"),
+            decoration: const InputDecoration(hintText: "Enter new item"),
             style: GoogleFonts.poppins(color: colorScheme.onSurface),
           ),
           actions: <Widget>[

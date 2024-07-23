@@ -7,6 +7,7 @@ class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _LeaderboardScreenState createState() => _LeaderboardScreenState();
 }
 
@@ -83,7 +84,14 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
               child: Column(
                 children: [
                   _buildCurrentUserPosition(),
-                  _buildTopThree(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Color.fromARGB(255, 238, 224, 229)),
+                        child: _buildTopThree()),
+                  ),
                   Expanded(
                     child: _buildLeaderboardList(),
                   ),

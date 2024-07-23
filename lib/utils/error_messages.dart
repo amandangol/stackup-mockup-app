@@ -38,7 +38,9 @@ String getErrorMessage(Object e) {
       } else if (message.contains('weak-password')) {
         return "Password is too weak";
       } else if (message.contains('Password should be at least 6 characters')) {
-        return 'Password is too weak';
+        return 'Password should be at least 6 characters';
+      } else if (message.contains('An internal error has occurred.')) {
+        return 'Please check your internet connection and try again';
       } else {
         return 'An unknown error occurred. Please try again.';
       }

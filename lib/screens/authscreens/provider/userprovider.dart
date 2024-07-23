@@ -4,7 +4,9 @@ import 'package:stackup_app/services/auth/auth_service.dart';
 
 class UserProvider extends ChangeNotifier {
   String? _username;
+  String? _email;
   String? get username => _username;
+  String? get email => _email;
 
   final AuthService _authService = AuthService();
 
