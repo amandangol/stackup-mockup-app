@@ -43,10 +43,7 @@ class _MyprogressScreenState extends State<MyprogressScreen> {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                      showOngoingQuests
-                          ? "Ongoing Campaign Filters"
-                          : "Past Campaign Filters",
+                  Text(showOngoingQuests ? "Ongoing Quests " : "Past Quests",
                       style: GoogleFonts.poppins(
                           color: Theme.of(context).colorScheme.inversePrimary,
                           fontSize: 18,
