@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
+import 'package:stackup_app/screens/authscreens/provider/userprovider.dart';
 import 'package:stackup_app/screens/leaderboard/leaderboard_screen.dart';
 import 'package:stackup_app/screens/my_earnings/earning_screen.dart';
 import 'package:stackup_app/screens/home_screen/home_screen.dart';
@@ -32,7 +34,7 @@ class _BottomNavHomeState extends State<BottomNavHome> {
 
   @override
   void initState() {
-    // Provider.of<UserProvider>(context, listen: false).loadUsername();
+    Provider.of<UserProvider>(context, listen: false).loadUsername();
 
     super.initState();
   }

@@ -38,7 +38,7 @@ class _LoginScreenState extends State<SignupScreen> {
       await authService.signUpWithEmailAndPassword(
         emailController.text,
         passwordController.text,
-        // usernameController.text,
+        usernameController.text,
       );
       print("${usernameController.text}aas");
       // hideLoadingDialog(context);
@@ -137,19 +137,19 @@ class _LoginScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                // CustomTextField(
-                //     validator: (value) {
-                //       if (value == null || value.isEmpty) {
-                //         return "Please enter your stackiename";
-                //       }
-                //       return null;
-                //     },
-                //     controller: usernameController,
-                //     hintText: "Stackiename",
-                //     obscureText: false),
-                // const SizedBox(
-                //   height: 10,
-                // ),
+                CustomTextField(
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "Please enter your stackiename";
+                      }
+                      return null;
+                    },
+                    controller: usernameController,
+                    hintText: "Stackiename",
+                    obscureText: false),
+                const SizedBox(
+                  height: 10,
+                ),
                 CustomTextField(
                     labelText: "Password",
                     suffixIcon: value.isObscure

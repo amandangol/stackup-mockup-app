@@ -14,13 +14,18 @@ class AuthService {
   Future<String?> getCurrentUsername() async {
     User? user = getCurrentUser();
     if (user != null) {
-      print("Current user UID: ${user.uid}");
-      DocumentSnapshot userDoc =
-          await _firestore.collection('users').doc(user.uid).get();
-      if (userDoc.exists) {
-        return userDoc.get('username') as String?;
-      } else {
-        print("User document does not exist for UID: ${user.uid}");
+      try {
+        DocumentSnapshot userDoc =
+            await _firestore.collection('users').doc(user.uid).get();
+        if (userDoc.exists) {
+          Map<String, dynamic> userData =
+              userDoc.data() as Map<String, dynamic>;
+          return userData['username'] as String?;
+        } else {
+          print("User document does not exist for UID: ${user.uid}");
+        }
+      } catch (e) {
+        print("Error fetching username: $e");
       }
     } else {
       print("No current user");
@@ -30,7 +35,7 @@ class AuthService {
 
   // Sign up
   Future<UserCredential> signUpWithEmailAndPassword(
-      String email, String password) async {
+      String email, String password, String username) async {
     try {
       UserCredential userCredential =
           await _firebaseAuth.createUserWithEmailAndPassword(
@@ -39,10 +44,10 @@ class AuthService {
       );
 
       // Store username in firestore
-      // await _firestore.collection('users').doc(userCredential.user!.uid).set({
-      //   'email': email,
-      //   'username': username,
-      // });
+      await _firestore.collection('users').doc(userCredential.user!.uid).set({
+        'email': email,
+        'username': username,
+      });
 
       return userCredential;
     } on FirebaseAuthException catch (e) {

@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
               user.username != null
                   ? "Welcome, ${user.username}"
                   : "Welcome...",
-              style: GoogleFonts.poppins(),
+              style: GoogleFonts.poppins(fontSize: 16),
             );
           }),
         ),
