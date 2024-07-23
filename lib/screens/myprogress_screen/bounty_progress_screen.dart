@@ -191,6 +191,7 @@ class _BountyProgressScreenState extends State<BountyProgressScreen> {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text(
           "Bounty Progress",
           style: GoogleFonts.poppins(color: colorScheme.inversePrimary),
