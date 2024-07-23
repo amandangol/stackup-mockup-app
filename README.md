@@ -8,10 +8,10 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 
 ### 1. Authentication
 
-- **Sign Up**: New users can create their StackUp accounts directly from the mobile app.
+- **Sign Up**: New users can create their StackUp accounts directly from the mobile app using email address.
 - **Login**: Existing users can securely access their accounts.
 
-<img src="https://github.com/user-attachments/assets/0358ffc3-b020-493e-814f-77d3c19a16c3" alt="splash"  height="500"> <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500"> <img src="https://github.com/user-attachments/assets/41acd5e7-bf5a-4b23-9c8f-0320daa6137f" alt="login"  height="500">
+<img src="https://github.com/user-attachments/assets/0358ffc3-b020-493e-814f-77d3c19a16c3" alt="splash"  height="500"> <img src="https://github.com/user-attachments/assets/9e70afdc-4211-4d26-b4ba-989af851ebcb" alt="signup"  height="500"> <img src="https://github.com/user-attachments/assets/6446c53e-e61a-456b-8b76-5afeffb03133" alt="login"  height="500">
 
 ### 2. Campaigns and Quests
 
@@ -19,7 +19,7 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
 
-<img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500"> <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">
+<img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500"> <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500"> 
 
 ### 3. User Progress Screen
 
@@ -38,6 +38,8 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
     - In Progress
 
 <img src="https://github.com/user-attachments/assets/5364e0c0-abee-4823-b6af-eb3e79ac94da" alt="myprogress"  height="500"> <img src="https://github.com/user-attachments/assets/83cfe433-6e9c-4bbb-abfc-698db199fa7e" alt="myprpgress2"  height="500"> <img src="https://github.com/user-attachments/assets/87fbf61f-7965-4bad-b054-02a30bff431b" alt="bounties"  height="500">
+<img src="https://github.com/user-attachments/assets/fe3db12c-0eb4-42dc-afd8-e995c0a98422" alt="filter1"  height="500"> <img src="https://github.com/user-attachments/assets/f994f758-844c-4d05-9d1a-7ba46fe2182e" alt="filter2"  height="500"> <img src="https://github.com/user-attachments/assets/ec8327da-32ef-4f32-8791-9c71115ed0f9" alt="filter3"  height="500">
+
 
 ### 4. My Earnings
 
