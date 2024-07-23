@@ -138,6 +138,7 @@ class _LoginScreenState extends State<SignupScreen> {
                   height: 10,
                 ),
                 CustomTextField(
+                    labelText: "Stackiename",
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return "Please enter your stackiename";

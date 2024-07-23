@@ -38,6 +38,17 @@ class HomeScreen extends StatelessWidget {
               style: GoogleFonts.poppins(fontSize: 16),
             );
           }),
+          actions: [
+            IconButton(
+              icon: const Icon(
+                Icons.notifications_outlined,
+                size: 26,
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, RoutesName.notifiScreen);
+              },
+            ),
+          ],
         ),
         drawer: const MyDrawer(),
         body: SingleChildScrollView(
@@ -146,17 +157,17 @@ class HomeScreen extends StatelessWidget {
                   print(campaigns[index].toString());
                   final campaign = campaigns[index];
                   return CampaignCard(
-                    image: campaign.image,
-                    title: campaign.title,
-                    subTitle: campaign.subTitle,
-                    campaignStatus: campaign.campaignStatus,
-                    questCount: campaign.questCount,
-                    rewardPool: campaign.rewardPool,
-                    startDate: campaign.startDate,
-                    endDate: campaign.endDate,
-                    endsInDay: campaign.endsInDay,
-                    endsInHours: campaign.endsInHours,
-                    endsInMins: campaign.endsInMins,
+                    image: campaign.image!,
+                    title: campaign.title!,
+                    subTitle: campaign.subTitle!,
+                    campaignStatus: campaign.campaignStatus!,
+                    questCount: campaign.questCount!,
+                    rewardPool: campaign.rewardPool!,
+                    startDate: campaign.startDate!,
+                    endDate: campaign.endDate!,
+                    endsInDay: campaign.endsInDay!,
+                    endsInHours: campaign.endsInHours!,
+                    endsInMins: campaign.endsInMins!,
                     hasDays: true,
                     onTap: () {
                       Navigator.push(
@@ -200,14 +211,14 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final campaign = endedCampaigns[index];
                   return CampaignCard(
-                    image: campaign.image,
-                    title: campaign.title,
+                    image: campaign.image!,
+                    title: campaign.title!,
                     subTitle: "",
                     campaignStatus: "Past",
-                    questCount: campaign.questCount,
-                    rewardPool: campaign.rewardPool,
-                    startDate: campaign.startDate,
-                    endDate: campaign.endDate,
+                    questCount: campaign.questCount!,
+                    rewardPool: campaign.rewardPool!,
+                    startDate: campaign.startDate!,
+                    endDate: campaign.endDate!,
                     endsInDay: "",
                     endsInHours: "",
                     endsInMins: "",

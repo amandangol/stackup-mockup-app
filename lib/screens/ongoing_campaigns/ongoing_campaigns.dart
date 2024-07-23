@@ -57,17 +57,17 @@ class OngoingAndUpcomingCampaigns extends StatelessWidget {
               itemBuilder: (context, index) {
                 final campaign = campaigns[index];
                 return CampaignCard(
-                  image: campaign.image,
-                  title: campaign.title,
-                  subTitle: campaign.subTitle,
-                  campaignStatus: campaign.campaignStatus,
-                  questCount: campaign.questCount,
-                  rewardPool: campaign.rewardPool,
-                  startDate: campaign.startDate,
-                  endDate: campaign.endDate,
-                  endsInDay: campaign.endsInDay,
-                  endsInHours: campaign.endsInHours,
-                  endsInMins: campaign.endsInMins,
+                  image: campaign.image!,
+                  title: campaign.title!,
+                  subTitle: campaign.subTitle!,
+                  campaignStatus: campaign.campaignStatus!,
+                  questCount: campaign.questCount!,
+                  rewardPool: campaign.rewardPool!,
+                  startDate: campaign.startDate!,
+                  endDate: campaign.endDate!,
+                  endsInDay: campaign.endsInDay!,
+                  endsInHours: campaign.endsInHours!,
+                  endsInMins: campaign.endsInMins!,
                   hasDays: true,
                   onTap: () {
                     Navigator.push(

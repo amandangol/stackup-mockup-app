@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:stackup_app/screens/authscreens/provider/userprovider.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -45,26 +47,28 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const CircleAvatar(
-              radius: 50,
-              backgroundImage: NetworkImage(
-                'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg',
+        child: Consumer<UserProvider>(builder: (context, user, child) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                  'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg',
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              'Stackie123',
-              style: GoogleFonts.poppins(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+              const SizedBox(height: 10),
+              Text(
+                user.username!,
+                style: GoogleFonts.poppins(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-            ),
-          ],
-        ),
+            ],
+          );
+        }),
       ),
     );
   }
