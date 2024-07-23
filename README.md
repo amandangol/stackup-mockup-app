@@ -63,6 +63,11 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 
 
 Additionally, the app includes:
+### Notification Feature: 
+The app provides real-time notifications to users about new quests, bounties, and other important updates. This keeps users engaged and informed about the latest opportunities on the platform.
+
+<img src="https://github.com/user-attachments/assets/ec16f1cd-8f4a-4ee8-84a8-f3f7df1901ee" alt="notification"  height="500">
+
 
 ### Dark Mode:
 
@@ -74,7 +79,6 @@ The app features an improved design and user interface, making navigation more i
 
 <img src="https://github.com/user-attachments/assets/231c6d20-adda-4eac-b794-6dc064b43179" alt="dark1"  height="500"> <img src="https://github.com/user-attachments/assets/7a04fe7a-6013-40a2-ad54-6f5330df5c76" alt="dark2"  height="500">
 
-<img src="https://github.com/user-attachments/assets/ec16f1cd-8f4a-4ee8-84a8-f3f7df1901ee" alt="notification"  height="500">
 
 ## Purpose and Benefits
 
@@ -86,19 +90,8 @@ The StackUp mobile app concept aims to enhance user engagement and accessibility
 4. Engage in friendly competition through the leaderboard feature.
 5. Manage their profile and professional information conveniently.
 
-## Technical Considerations
-
-While this README describes a conceptual mock-up, the actual development of the StackUp mobile app would involve:
-
-- Choosing between native (iOS/Android) or cross-platform development frameworks.
-- Ensuring secure authentication and data protection measures.
-- Implementing efficient data synchronization between the mobile app and StackUp servers.
-- Optimizing the app for performance across various mobile devices.
-
-## NOTE: The link for the APK file is [HERE](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) . You can install it on your Android device and test it. (Compatible with Android for now) 🥲
 
 ## Conclusion
 
-The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
+The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, real-time notifications, track earnings, and manage their profiles on the go, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
 
-I welcome feedback and suggestions to further refine this concept and potentially bring the StackUp mobile app to life in the future.
