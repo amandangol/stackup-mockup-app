@@ -19,7 +19,7 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
 
-<img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">
+<img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">  <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">
 
 ### 3. User Progress Screen
 
@@ -40,7 +40,7 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 
   <img src="https://github.com/user-attachments/assets/68eb1b54-e5eb-4d27-9b17-62d44f77d930" alt="earning"  height="500">
 
-### 5. Leaderboard (New Feature)
+### 5. Leaderboard
 
 - Global leaderboard showcasing top performers on the platform.
 - User rankings based on experience points (XP).
@@ -94,4 +94,4 @@ While this README describes a conceptual mock-up, the actual development of the 
 
 The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
 
-We welcome feedback and suggestions to further refine this concept and potentially bring the StackUp mobile app to life in the future.
+I welcome feedback and suggestions to further refine this concept and potentially bring the StackUp mobile app to life in the future.
