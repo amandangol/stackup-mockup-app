@@ -19,7 +19,7 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
 
-<img src="https://github.com/user-attachments/assets/25071ed0-dc10-4eeb-9e0f-3dfae0d6e2e0" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">  <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">  <img src="https://github.com/user-attachments/assets/6adc0691-c5b0-480c-98e8-756208f266cd" alt="earn campaign">
+<img src="https://github.com/user-attachments/assets/25071ed0-dc10-4eeb-9e0f-3dfae0d6e2e0" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">  <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">  <img src="https://github.com/user-attachments/assets/6adc0691-c5b0-480c-98e8-756208f266cd" alt="earn campaign" height="500">
 
 
 
