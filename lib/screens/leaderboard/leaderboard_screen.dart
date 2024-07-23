@@ -79,16 +79,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
               color: colorScheme.primary,
             ))
           : Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.deepPurple[100]!,
-                    const Color.fromARGB(255, 249, 224, 224),
-                  ],
-                ),
-              ),
+              decoration: BoxDecoration(color: colorScheme.secondary),
               child: Column(
                 children: [
                   _buildCurrentUserPosition(),

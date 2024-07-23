@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NotificationScreen extends StatelessWidget {
-  const NotificationScreen({Key? key}) : super(key: key);
+  const NotificationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final textTheme = GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme);
+    // final textTheme = GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -32,8 +32,7 @@ class NotificationScreen extends StatelessWidget {
 class NotificationItem extends StatelessWidget {
   final Notification notification;
 
-  const NotificationItem({Key? key, required this.notification})
-      : super(key: key);
+  const NotificationItem({super.key, required this.notification});
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +83,7 @@ class NotificationItem extends StatelessWidget {
         break;
       case NotificationType.updates:
         iconData = Icons.push_pin;
-        iconColor = const Color.fromARGB(255, 110, 41, 37);
+        iconColor = Color.fromARGB(255, 179, 55, 48);
         break;
       case NotificationType.reward:
         iconData = Icons.money;

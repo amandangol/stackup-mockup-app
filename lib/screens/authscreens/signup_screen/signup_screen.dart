@@ -86,6 +86,15 @@ class _LoginScreenState extends State<SignupScreen> {
   }
 
   @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    confirmPasswordController.dispose();
+    usernameController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Consumer<ObscureProvider>(builder: (context, value, child) {
       return Scaffold(
