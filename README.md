@@ -19,7 +19,13 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
 
+<<<<<<< HEAD
 <img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500"> <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">
+=======
+ <img src="https://github.com/user-attachments/assets/dbac16fa-d66f-4690-b36a-8d7e6956e234" alt="homepage1"  height="500">   <img src="https://github.com/user-attachments/assets/25071ed0-dc10-4eeb-9e0f-3dfae0d6e2e0" alt="homepage2"  height="500">  <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">  <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">  <img src="https://github.com/user-attachments/assets/6adc0691-c5b0-480c-98e8-756208f266cd" alt="earn campaign" height="500">
+
+
+>>>>>>> 9aa4fcfa0a71454d69161ed82421ddb17ed8a797
 
 ### 3. User Progress Screen
 
@@ -57,9 +63,19 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Showcase of professional details and achievements.
 - Option to edit and update profile information.
 
+<<<<<<< HEAD
 <img src="profile1.jpg" alt="profile"  height="500">
+=======
+  <img src="https://github.com/user-attachments/assets/4f8a6b63-b8e2-46b1-9ed2-b1f8b40337c2" alt="profile"  height="500">
+
+>>>>>>> 9aa4fcfa0a71454d69161ed82421ddb17ed8a797
 
 Additionally, the app includes:
+### Notification Feature: 
+The app provides real-time notifications to users about new quests, bounties, and other important updates. This keeps users engaged and informed about the latest opportunities on the platform.
+
+<img src="https://github.com/user-attachments/assets/ec16f1cd-8f4a-4ee8-84a8-f3f7df1901ee" alt="notification"  height="500">
+
 
 ### Dark Mode:
 
@@ -71,6 +87,7 @@ The app features an improved design and user interface, making navigation more i
 
 <img src="https://github.com/user-attachments/assets/231c6d20-adda-4eac-b794-6dc064b43179" alt="dark1"  height="500"> <img src="https://github.com/user-attachments/assets/7a04fe7a-6013-40a2-ad54-6f5330df5c76" alt="dark2"  height="500">
 
+
 ## Purpose and Benefits
 
 The StackUp mobile app concept aims to enhance user engagement and accessibility. By bringing the platform's features to a mobile environment, users can:
@@ -81,19 +98,10 @@ The StackUp mobile app concept aims to enhance user engagement and accessibility
 4. Engage in friendly competition through the leaderboard feature.
 5. Manage their profile and professional information conveniently.
 
-## Technical Considerations
-
-While this README describes a conceptual mock-up, the actual development of the StackUp mobile app would involve:
-
-- Choosing between native (iOS/Android) or cross-platform development frameworks.
-- Ensuring secure authentication and data protection measures.
-- Implementing efficient data synchronization between the mobile app and StackUp servers.
-- Optimizing the app for performance across various mobile devices.
-
-## NOTE: The link for the APK file is [HERE](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) . You can install it on your Android device and test it. (Compatible with Android for now) 🥲
 
 ## Conclusion
 
-The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
+The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, real-time notifications, track earnings, and manage their profiles on the go, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
 
-I welcome feedback and suggestions to further refine this concept and potentially bring the StackUp mobile app to life in the future.
+An APK file is available [HERE](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) for Android users to test the app, though it's currently only compatible with Android devices.
+
