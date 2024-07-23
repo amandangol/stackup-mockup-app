@@ -19,7 +19,9 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Access detailed information about individual quests within each campaign.
 - User-friendly interface for easy navigation between campaigns and quests.
 
-<img src="https://github.com/user-attachments/assets/daca335f-165a-424d-8e9f-17c675b2066c" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">  <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">
+<img src="https://github.com/user-attachments/assets/25071ed0-dc10-4eeb-9e0f-3dfae0d6e2e0" alt="homepage1"  height="500"> <img src="https://github.com/user-attachments/assets/87a811fa-519b-411d-b3b7-0da1de35a65f" alt="homepage2"  height="500"> <img src="https://github.com/user-attachments/assets/9ca86acb-95d2-4451-8442-5aefd4cf3de7" alt="campaign1"  height="500">  <img src="https://github.com/user-attachments/assets/ddd0da7c-cc86-49d3-bd56-fd17bc36323d" alt="homepage1"  height="500">  <img src="https://github.com/user-attachments/assets/6adc0691-c5b0-480c-98e8-756208f266cd" alt="earn campaign">
+
+
 
 ### 3. User Progress Screen
 
@@ -57,6 +59,9 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Showcase of professional details and achievements.
 - Option to edit and update profile information.
 
+  <img src="https://github.com/user-attachments/assets/4f8a6b63-b8e2-46b1-9ed2-b1f8b40337c2" alt="profile"  height="500">
+
+
 Additionally, the app includes:
 
 ### Dark Mode:
@@ -68,6 +73,8 @@ The app offers a dark mode option, enhancing user experience in low-light condit
 The app features an improved design and user interface, making navigation more intuitive and visually appealing.
 
 <img src="https://github.com/user-attachments/assets/231c6d20-adda-4eac-b794-6dc064b43179" alt="dark1"  height="500"> <img src="https://github.com/user-attachments/assets/7a04fe7a-6013-40a2-ad54-6f5330df5c76" alt="dark2"  height="500">
+
+<img src="https://github.com/user-attachments/assets/ec16f1cd-8f4a-4ee8-84a8-f3f7df1901ee" alt="notification"  height="500">
 
 ## Purpose and Benefits
 
