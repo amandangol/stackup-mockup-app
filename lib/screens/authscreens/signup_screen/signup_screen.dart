@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:stackup_app/common_widgets/custom_button.dart';
 import 'package:stackup_app/common_widgets/custom_textfield.dart';
@@ -102,7 +103,7 @@ class _LoginScreenState extends State<SignupScreen> {
                 ),
                 Text(
                   "Create your account",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       letterSpacing: 2,
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontSize: 20,
@@ -113,7 +114,7 @@ class _LoginScreenState extends State<SignupScreen> {
                 ),
                 Text(
                   "Let's init your developer journey",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                       letterSpacing: 2,
                       color: Theme.of(context).colorScheme.inversePrimary,
                       fontSize: 16,
@@ -205,7 +206,7 @@ class _LoginScreenState extends State<SignupScreen> {
                   children: [
                     Text(
                       "Already have an account?",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                           color: Theme.of(context).colorScheme.inversePrimary),
                     ),
                     const SizedBox(
@@ -222,7 +223,7 @@ class _LoginScreenState extends State<SignupScreen> {
                       },
                       child: Text(
                         "Log In",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             color: Theme.of(context).colorScheme.inversePrimary,
                             fontWeight: FontWeight.bold),
                       ),

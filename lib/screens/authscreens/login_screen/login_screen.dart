@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:stackup_app/bottomnav/bottomNavWrapper.dart';
 import 'package:stackup_app/common_widgets/custom_button.dart';
 import 'package:stackup_app/common_widgets/custom_textfield.dart';
 import 'package:stackup_app/config/routes/routes_name.dart';
@@ -91,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Text(
                     "Welcome",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         letterSpacing: 2,
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontSize: 20,
@@ -102,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   Text(
                     "Log in to your StackUp account",
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                         letterSpacing: 2,
                         color: Theme.of(context).colorScheme.inversePrimary,
                         fontSize: 16,
@@ -138,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         return null;
                       },
                       controller: passwordController,
-                      hintText: "Enter you password",
+                      hintText: "Enter your password",
                       obscureText: value.isObscure),
                   const SizedBox(
                     height: 25,
@@ -160,7 +160,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       Text(
                         "Don't have an account?",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             color:
                                 Theme.of(context).colorScheme.inversePrimary),
                       ),
@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                         child: Text(
                           "Sign Up",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color:
                                   Theme.of(context).colorScheme.inversePrimary,
                               fontWeight: FontWeight.bold),

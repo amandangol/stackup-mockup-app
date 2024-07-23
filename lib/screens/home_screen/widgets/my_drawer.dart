@@ -225,15 +225,15 @@ class _MyDrawerState extends State<MyDrawer> {
                   color: Colors.blue,
                 ),
               ),
-              IconButton(
-                onPressed: () {
-                  _launchURL("https://www.facebook.com/StackUpHQ");
-                },
-                icon: const FaIcon(
-                  FontAwesomeIcons.facebook,
-                  color: Colors.blue,
-                ),
-              ),
+              // IconButton(
+              //   onPressed: () {
+              //     _launchURL("https://www.facebook.com/StackUpHQ");
+              //   },
+              //   icon: const FaIcon(
+              //     FontAwesomeIcons.facebook,
+              //     color: Colors.blue,
+              //   ),
+              // ),
               IconButton(
                 onPressed: () {
                   _launchURL(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
@@ -29,6 +30,7 @@ class CustomTextField extends StatelessWidget {
         autofocus: false,
         obscureText: obscureText!,
         decoration: InputDecoration(
+            fillColor: Theme.of(context).colorScheme.secondary,
             labelText: labelText,
             suffixIcon: IconButton(
               icon: Icon(suffixIcon),
@@ -41,7 +43,7 @@ class CustomTextField extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
                 borderSide:
                     BorderSide(color: Theme.of(context).colorScheme.primary)),
-            hintStyle: TextStyle(
+            hintStyle: GoogleFonts.poppins(
                 color: Theme.of(context).colorScheme.inversePrimary,
                 letterSpacing: 0.5)),
       ),
