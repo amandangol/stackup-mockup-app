@@ -76,6 +76,6 @@ The StackUp mobile app concept aims to enhance user engagement and accessibility
 
 ## Conclusion
 
-The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard and advanced filtering options, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
+The proposed StackUp mobile app mock-up represents an exciting opportunity to expand the platform's reach and enhance user experience. By combining existing features with new additions like the leaderboard, real-time notifications, track earnings, and manage their profiles on the go, this concept aims to create a comprehensive, engaging, and user-friendly mobile application for the StackUp community.
 
 ## An APK file is available [HERE](https://drive.google.com/drive/u/1/folders/1IyOZiFXVL5RygKfGISsr20ygBzxXCjnI) for Android users to test the app, though it's currently only compatible with Android devices.
