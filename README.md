@@ -10,8 +10,8 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 
 - **Sign Up**: New users can create their StackUp accounts directly from the mobile app.
 - **Login**: Existing users can securely access their accounts.
-
-<img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500"> <img src="https://github.com/user-attachments/assets/41acd5e7-bf5a-4b23-9c8f-0320daa6137f" alt="login"  height="500">
+  
+ <img src="https://github.com/user-attachments/assets/0358ffc3-b020-493e-814f-77d3c19a16c3" alt="splash"  height="500">  <img src="https://github.com/user-attachments/assets/05a36e2d-148d-42a5-a1e1-0581f43ff58c" alt="signup"  height="500"> <img src="https://github.com/user-attachments/assets/41acd5e7-bf5a-4b23-9c8f-0320daa6137f" alt="login"  height="500">
 
 ### 2. Campaigns and Quests
 
