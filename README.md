@@ -65,12 +65,12 @@ StackUp is a pioneering platform that empowers developers to learn, build, and e
 - Display of user's personal information.
 - Showcase of professional details and achievements.
 - Option to edit and update profile information.
-
-<img src="profile1.jpg" alt="profile"  height="500"> <img src="https://github.com/user-attachments/assets/4f8a6b63-b8e2-46b1-9ed2-b1f8b40337c2" alt="profile"  height="500">
+ <img src="https://github.com/user-attachments/assets/4f8a6b63-b8e2-46b1-9ed2-b1f8b40337c2" alt="profile"  height="500">
 
 ### Additional Features:
 
 - **Notification Feature**: The app provides real-time notifications to users about new quests, bounties, and other important updates. This keeps users engaged and informed about the latest opportunities on the platform.
+  
   <img src="https://github.com/user-attachments/assets/ec16f1cd-8f4a-4ee8-84a8-f3f7df1901ee" alt="notification"  height="500">
 
 - **Dark Mode**: The app offers a dark mode option, enhancing user experience in low-light conditions and providing a sleek alternative to the standard interface.
