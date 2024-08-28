@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
                                     _launchURL(
-                                        'https://stackuphq.notion.site/Monthly-Happenings-ae7b7a4033f44ea2949e98c5e6604387');
+                                        'https://stackup.dev/calendar/');
                                   },
                               ),
                               const TextSpan(
